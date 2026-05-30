@@ -3,608 +3,546 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>HAN → AMS Flight Tracker</title>
+<title>HAN → AMS/DUS/BRU Flight Tracker</title>
 <style>
-:root{
-  --green:#16a34a;--gl:#dcfce7;--gb:#86efac;
-  --amber:#d97706;--al:#fef3c7;--ab:#fcd34d;
-  --blue:#2563eb;--blue-d:#1d4ed8;--gray:#6b7280;
-  --bg:#f1f5f9;--card:#fff;--border:#e2e8f0;--text:#0f172a;--text2:#475569;
+:root {
+  --green:#16a34a; --gl:#dcfce7; --gb:#86efac;
+  --amber:#d97706; --al:#fef3c7; --ab:#fcd34d;
+  --blue:#2563eb;  --blue-d:#1d4ed8;
+  --gray:#6b7280;  --bg:#f1f5f9; --card:#fff;
+  --border:#e2e8f0; --text:#0f172a; --text2:#475569;
 }
-*{box-sizing:border-box;margin:0;padding:0;}
-body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);min-height:100vh;}
+* { box-sizing:border-box; margin:0; padding:0; }
+body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+       background:var(--bg); color:var(--text); min-height:100vh; }
 
 /* Header */
-header{background:linear-gradient(135deg,#0f2d5c 0%,#1d4ed8 100%);color:#fff;padding:26px 32px 22px;}
-header h1{font-size:1.55rem;font-weight:800;letter-spacing:-.5px;}
-header p{opacity:.82;margin-top:5px;font-size:.9rem;}
-.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px;}
-.chip{font-size:.72rem;font-weight:600;padding:3px 10px;border-radius:99px;background:rgba(255,255,255,.18);color:#fff;}
-.chip.warn{background:rgba(239,68,68,.35);}
+header { background:linear-gradient(135deg,#0f2d5c,#1d4ed8); color:#fff; padding:22px 28px 18px; }
+header h1 { font-size:1.5rem; font-weight:800; }
+header p  { opacity:.82; margin-top:4px; font-size:.9rem; }
+.chips { display:flex; gap:7px; flex-wrap:wrap; margin-top:10px; }
+.chip { font-size:.71rem; font-weight:600; padding:3px 10px; border-radius:99px;
+        background:rgba(255,255,255,.18); color:#fff; }
+.chip.warn { background:rgba(239,68,68,.35); }
 
 /* Layout */
-main{display:grid;grid-template-columns:260px 1fr;gap:0;min-height:calc(100vh - 120px);}
+main { display:grid; grid-template-columns:260px 1fr; min-height:calc(100vh - 115px); }
 
-/* Date sidebar */
-.sidebar{background:#fff;border-right:1px solid var(--border);padding:16px 12px;overflow-y:auto;}
-.sidebar-title{font-size:.72rem;font-weight:700;letter-spacing:.8px;color:var(--gray);text-transform:uppercase;padding:0 4px 10px;}
-.date-btn{
-  width:100%;text-align:left;border:none;background:transparent;
-  padding:9px 10px;border-radius:8px;cursor:pointer;
-  display:flex;align-items:center;gap:10px;
-  transition:background .12s;margin-bottom:3px;
-  font-family:inherit;
-}
-.date-btn:hover{background:#f8fafc;}
-.date-btn.active{background:#eff6ff;}
-.date-btn .dot-pref{width:8px;height:8px;border-radius:50%;background:var(--green);flex-shrink:0;}
-.date-btn .dot-ok  {width:8px;height:8px;border-radius:50%;background:var(--amber);flex-shrink:0;}
-.date-btn .label{flex:1;}
-.date-btn .label .d{font-size:.88rem;font-weight:600;}
-.date-btn .label .sub{font-size:.72rem;color:var(--gray);margin-top:1px;}
-.date-btn .best-price{font-size:.82rem;font-weight:700;color:var(--blue);white-space:nowrap;}
-.date-btn .no-data{font-size:.72rem;color:#cbd5e1;}
+/* Sidebar */
+.sidebar { background:#fff; border-right:1px solid var(--border); padding:14px 10px; overflow-y:auto; }
+.sidebar-label { font-size:.67rem; font-weight:700; letter-spacing:.7px; color:#94a3b8;
+                 text-transform:uppercase; padding:0 4px 8px; }
+.dest-tabs { display:flex; gap:4px; margin-bottom:12px; }
+.dest-tab { flex:1; padding:6px 4px; border-radius:7px; border:1.5px solid var(--border);
+            font-size:.78rem; font-weight:700; cursor:pointer; font-family:inherit;
+            background:#fff; color:var(--text2); transition:all .15s; }
+.dest-tab.active { background:#1e3a5f; color:#fff; border-color:#1e3a5f; }
+.month-label { font-size:.67rem; font-weight:700; letter-spacing:.6px; color:#94a3b8;
+               text-transform:uppercase; padding:10px 6px 4px; }
+.date-btn { width:100%; text-align:left; border:none; background:transparent;
+            padding:8px 8px; border-radius:8px; cursor:pointer; display:flex;
+            align-items:center; gap:8px; transition:background .12s; margin-bottom:2px;
+            font-family:inherit; }
+.date-btn:hover { background:#f8fafc; }
+.date-btn.active { background:#eff6ff; }
+.dot-g { width:8px; height:8px; border-radius:50%; background:var(--green); flex-shrink:0; }
+.dot-a { width:8px; height:8px; border-radius:50%; background:var(--amber); flex-shrink:0; }
+.date-btn .lbl { flex:1; }
+.date-btn .lbl .d   { font-size:.87rem; font-weight:600; }
+.date-btn .lbl .sub { font-size:.7rem; color:var(--gray); margin-top:1px; }
+.date-btn .pr  { font-size:.82rem; font-weight:700; color:var(--blue); white-space:nowrap; }
+.date-btn .nd  { font-size:.7rem; color:#cbd5e1; }
 
-/* Content panel */
-.panel{padding:24px 28px;overflow-y:auto;}
-.panel-header{margin-bottom:18px;}
-.panel-header h2{font-size:1.2rem;font-weight:700;}
-.panel-header .meta{font-size:.82rem;color:var(--text2);margin-top:4px;display:flex;gap:14px;flex-wrap:wrap;}
-.panel-header .meta span{display:flex;align-items:center;gap:4px;}
+/* Panel */
+.panel { padding:22px 26px; overflow-y:auto; }
+
+/* Settings */
+.settings-box { background:#fff; border:1.5px solid var(--border); border-radius:12px;
+                padding:18px 22px; margin-bottom:20px; }
+.settings-box h3 { font-size:.93rem; font-weight:700; margin-bottom:4px; }
+.settings-box .repo-hint { font-size:.73rem; color:var(--green); margin-bottom:14px; }
+.setting-row { display:flex; align-items:flex-start; gap:12px;
+               padding:10px 0; border-bottom:1px solid var(--border); }
+.setting-row:last-of-type { border-bottom:none; }
+.toggle { position:relative; display:inline-block; width:40px; height:22px; flex-shrink:0; margin-top:2px; }
+.toggle input { opacity:0; width:0; height:0; }
+.slider { position:absolute; inset:0; background:#cbd5e1; border-radius:99px; cursor:pointer; transition:.2s; }
+.slider:before { content:""; position:absolute; width:16px; height:16px; left:3px; bottom:3px;
+                 background:#fff; border-radius:50%; transition:.2s; }
+input:checked + .slider { background:var(--green); }
+input:checked + .slider:before { transform:translateX(18px); }
+.setting-info strong { display:block; font-size:.87rem; font-weight:600; }
+.setting-info span   { font-size:.77rem; color:var(--text2); margin-top:2px; display:block; }
+.threshold-row { display:flex; align-items:center; gap:7px; margin-top:6px; }
+.threshold-input { width:80px; padding:4px 8px; border:1.5px solid var(--border);
+                   border-radius:6px; font-size:.84rem; font-family:inherit; outline:none; }
+.threshold-input:focus { border-color:var(--blue); }
+.token-input { width:100%; padding:5px 10px; border:1.5px solid var(--border);
+               border-radius:6px; font-size:.82rem; font-family:monospace; outline:none; margin-top:6px; }
+.token-input:focus { border-color:var(--blue); }
+.info-box { background:#eff6ff; border:1px solid #bfdbfe; border-radius:7px;
+            padding:9px 13px; font-size:.78rem; color:#1e40af; margin-top:8px; line-height:1.6; }
+.info-box a { color:#1d4ed8; }
+.save-row { display:flex; align-items:center; gap:10px; margin-top:14px; flex-wrap:wrap; }
+.save-btn { padding:7px 16px; background:var(--blue); color:#fff; border:none;
+            border-radius:7px; font-size:.84rem; font-weight:600; cursor:pointer;
+            font-family:inherit; transition:background .15s; }
+.save-btn:hover { background:var(--blue-d); }
+.save-btn:disabled { background:#93c5fd; cursor:not-allowed; }
+.save-status { font-size:.78rem; color:var(--gray); }
+.saved-bar { display:none; margin-top:10px; padding:9px 13px; background:#f8fafc;
+             border:1px solid var(--border); border-radius:8px; font-size:.77rem;
+             color:var(--text2); line-height:1.9; }
+.saved-bar strong { color:var(--text); font-size:.8rem; }
+
+/* Status */
+#status { display:flex; align-items:center; gap:8px; font-size:.81rem; color:var(--text2);
+          padding:9px 13px; background:#fff; border:1px solid var(--border);
+          border-radius:8px; margin-bottom:18px; }
+.sdot { width:8px; height:8px; border-radius:50%; background:#cbd5e1; flex-shrink:0; }
+.sdot.green { background:var(--green); }
+.sdot.amber { background:var(--amber); }
 
 /* Alert */
-.alert{background:#fef2f2;border:1px solid #fca5a5;border-radius:10px;
-  padding:12px 16px;margin-bottom:20px;font-size:.84rem;color:#991b1b;}
-.alert b{display:block;margin-bottom:3px;}
+.alert { background:#fef2f2; border:1px solid #fca5a5; border-radius:10px;
+         padding:12px 16px; margin-bottom:18px; font-size:.84rem; color:#991b1b; }
+.alert strong { display:block; margin-bottom:3px; font-size:.9rem; }
 
-/* Status bar */
-#status{display:flex;align-items:center;gap:8px;font-size:.82rem;color:var(--text2);
-  padding:9px 13px;background:var(--card);border:1px solid var(--border);
-  border-radius:8px;margin-bottom:20px;}
-.status-dot{width:8px;height:8px;border-radius:50%;background:#cbd5e1;flex-shrink:0;}
-.status-dot.green{background:var(--green);}
-.status-dot.amber{background:var(--amber);}
-
-/* Empty/placeholder */
-.empty{text-align:center;padding:60px 20px;color:var(--gray);}
-.empty .icon{font-size:2.5rem;margin-bottom:12px;}
-.empty p{font-size:.9rem;line-height:1.6;}
+/* Empty */
+.empty { text-align:center; padding:60px 20px; color:var(--gray); }
+.empty .icon { font-size:2.5rem; margin-bottom:12px; }
 
 /* Flight cards */
-.flight-list{display:flex;flex-direction:column;gap:10px;}
-.flight-card{
-  background:var(--card);border:1.5px solid var(--border);border-radius:12px;
-  padding:16px 18px;display:grid;
-  grid-template-columns:auto 1fr auto;gap:12px;align-items:center;
-  transition:box-shadow .15s,border-color .15s;cursor:default;
-}
-.flight-card:hover{box-shadow:0 4px 16px rgba(0,0,0,.08);border-color:#bfdbfe;}
-.flight-card.top-pick{border-color:var(--gb);background:#f0fdf4;}
-.flight-rank{font-size:.78rem;font-weight:700;color:var(--gray);width:24px;text-align:center;}
-.flight-rank.gold{color:#ca8a04;}
-.flight-info{}
-.flight-airline{font-weight:700;font-size:.95rem;}
-.flight-route{font-size:.82rem;color:var(--text2);margin-top:3px;display:flex;align-items:center;gap:6px;flex-wrap:wrap;}
-.flight-route .arr{color:var(--text);}
-.flight-stops{display:flex;align-items:center;gap:5px;margin-top:6px;flex-wrap:wrap;}
-.stop-tag{font-size:.72rem;font-weight:600;background:#e0e7ff;color:#3730a3;border-radius:4px;padding:2px 6px;}
-.stop-tag.china{background:#fee2e2;color:#991b1b;}
-.stop-tag.korea{background:#dcfce7;color:#166534;}
-.stop-tag.sea{background:#ecfdf5;color:#065f46;}
-.stop-tag.europe{background:#fef3c7;color:#92400e;}
-.flight-duration{font-size:.78rem;color:var(--gray);margin-top:4px;}
-.flight-price{text-align:right;}
-.flight-price .amount{font-size:1.4rem;font-weight:800;color:var(--blue);}
-.flight-price .eur{font-size:.8rem;color:var(--text2);}
-.flight-price .stops-label{font-size:.72rem;color:var(--gray);margin-top:3px;}
-.badge-best{font-size:.68rem;font-weight:700;background:#dcfce7;color:#166534;
-  border-radius:99px;padding:2px 8px;display:inline-block;margin-top:4px;}
-.no-flights{text-align:center;padding:40px 20px;color:var(--gray);
-  border:2px dashed var(--border);border-radius:12px;}
-.no-flights p{margin-top:8px;font-size:.87rem;line-height:1.6;}
-
-/* Refresh bar */
-.refresh-bar{display:flex;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap;}
-.refresh-bar a{font-size:.8rem;color:var(--blue);text-decoration:none;font-weight:600;}
-.refresh-bar a:hover{text-decoration:underline;}
-.refresh-bar .sep{color:var(--border);}
-
-/* Responsive */
-@media(max-width:640px){
-  main{grid-template-columns:1fr;}
-  .sidebar{border-right:none;border-bottom:1px solid var(--border);padding:12px;}
-  .date-btn{display:inline-flex;width:auto;margin:3px;}
-}
+.flight-list { display:flex; flex-direction:column; gap:10px; }
+.flight-card { background:#fff; border:1.5px solid var(--border); border-radius:12px;
+               padding:16px 18px; display:grid; grid-template-columns:32px 1fr auto;
+               gap:12px; align-items:start; transition:box-shadow .15s,border-color .15s; }
+.flight-card:hover { box-shadow:0 4px 14px rgba(0,0,0,.08); border-color:#bfdbfe; }
+.flight-card.best { border-color:var(--gb); background:#f0fdf4; }
+.rank { font-size:.78rem; font-weight:700; color:var(--gray); text-align:center; padding-top:2px; }
+.airline { font-weight:700; font-size:.95rem; }
+.route { font-size:.82rem; color:var(--text2); margin-top:3px; }
+.hubs { display:flex; align-items:center; gap:5px; flex-wrap:wrap; margin-top:6px; }
+.hub { font-size:.71rem; font-weight:600; padding:2px 6px; border-radius:4px;
+       background:#e0e7ff; color:#3730a3; }
+.hub.sea    { background:#ecfdf5; color:#065f46; }
+.hub.china  { background:#fee2e2; color:#991b1b; }
+.hub.korea  { background:#dcfce7; color:#166534; }
+.hub.europe { background:#fef3c7; color:#92400e; }
+.dur { font-size:.77rem; color:var(--gray); margin-top:4px; }
+.book-row { display:flex; gap:5px; margin-top:10px; flex-wrap:wrap; padding-top:10px;
+            border-top:1px solid var(--border); align-items:center; }
+.book-lbl { font-size:.71rem; color:var(--gray); }
+.book-btn { font-size:.71rem; font-weight:600; padding:5px 10px; border-radius:6px;
+            border:none; cursor:pointer; text-decoration:none; display:inline-block;
+            transition:opacity .15s; }
+.book-btn:hover { opacity:.8; }
+.btn-gf  { background:#4285f4; color:#fff; }
+.btn-sky { background:#00a0e6; color:#fff; }
+.btn-kay { background:#ff690f; color:#fff; }
+.price-col { text-align:right; min-width:90px; }
+.price-col .amount { font-size:1.35rem; font-weight:800; color:var(--blue); }
+.price-col .sub    { font-size:.71rem; color:var(--gray); margin-top:2px; }
+.badge-best { font-size:.68rem; font-weight:700; background:var(--gl); color:var(--green);
+              border-radius:99px; padding:2px 8px; display:inline-block; margin-top:4px; }
+.no-flights { text-align:center; padding:36px 20px; color:var(--gray);
+              border:2px dashed var(--border); border-radius:12px; }
+.panel-hdr h2 { font-size:1.15rem; font-weight:700; }
+.panel-hdr .meta { display:flex; gap:14px; flex-wrap:wrap; font-size:.81rem;
+                   color:var(--text2); margin-top:5px; }
+.search-live { display:flex; align-items:center; gap:8px; flex-wrap:wrap;
+               font-size:.8rem; margin:14px 0; }
+.search-live span { color:var(--gray); }
+.search-live a { color:var(--blue); font-weight:600; text-decoration:none; }
+.search-live a:hover { text-decoration:underline; }
 </style>
 </head>
 <body>
 
 <header>
-  <h1>✈ HAN → AMS Flight Tracker</h1>
+  <h1>✈ HAN → AMS / DUS / BRU Flight Tracker</h1>
   <p>Hanoi → Amsterdam / Düsseldorf / Brussels · Vietnamese passport · Under €600 · Max 2 stops</p>
   <div class="chips">
     <span class="chip">🗓 Aug 18–31 preferred</span>
-    <span class="chip">🛬 AMS · DUS · BRU</span>
     <span class="chip">🔶 Sep 1–3 acceptable</span>
-    <span class="chip warn">🚫 No Middle East layovers</span>
-    <span class="chip warn">🚫 No London transfers</span>
     <span class="chip">✅ Max 2 stops</span>
+    <span class="chip warn">🚫 No Middle East</span>
+    <span class="chip warn">🚫 No London</span>
   </div>
 </header>
 
 <main>
-  <!-- Date sidebar -->
   <div class="sidebar">
-    <div class="sidebar-title">Select a date</div>
+    <div class="sidebar-label">Select a date</div>
+    <div class="dest-tabs" id="dest-tabs"></div>
     <div id="date-list"></div>
   </div>
 
-  <!-- Flight panel -->
   <div class="panel">
-  
-  <!-- ⚙ Notification Settings Panel -->
-  <div class="settings-panel" id="settings-panel">
-    <h3>⚙️ Notification Settings
-      <span style="font-size:.72rem;font-weight:400;color:var(--gray);margin-left:4px">
-        — changes are saved directly to your GitHub repo
-      </span>
-    </h3>
-    <div id="gh-coords-hint" style="font-size:.75rem;color:#94a3b8;margin-bottom:10px;"></div>
 
-    <div class="setting-row">
-      <div class="toggle-wrap">
-        <label class="toggle">
-          <input type="checkbox" id="toggle-run" onchange="markDirty()">
-          <span class="slider"></span>
-        </label>
-      </div>
-      <div class="setting-label">
-        <strong>Email me after every run</strong>
-        <span>Sends a summary of all flights found each time the tracker runs (twice daily).</span>
-      </div>
-    </div>
+    <!-- Notification Settings -->
+    <div class="settings-box">
+      <h3>⚙️ Notification Settings</h3>
+      <div class="repo-hint" id="repo-hint">Repo: github.com/Ymirthebear/flight-tracker</div>
 
-    <div class="setting-row">
-      <div class="toggle-wrap">
-        <label class="toggle">
-          <input type="checkbox" id="toggle-deal" onchange="markDirty()">
-          <span class="slider"></span>
-        </label>
-      </div>
-      <div class="setting-label">
-        <strong>Alert me when a deal is found under</strong>
-        <span>Sends an immediate alert email if any flight drops below your threshold.</span>
-        <div style="margin-top:6px;display:flex;align-items:center;gap:8px">
-          <span style="font-size:.82rem">€</span>
-          <input type="number" id="threshold" class="setting-input" min="200" max="499"
-                 value="450" onchange="markDirty()">
-          <span style="font-size:.82rem;color:var(--text2)">per person</span>
+      <div class="setting-row">
+        <label class="toggle"><input type="checkbox" id="tog-run"><span class="slider"></span></label>
+        <div class="setting-info">
+          <strong>Email me after every run</strong>
+          <span>Summary of all flights found — sent twice daily (9am &amp; 8pm Vietnam time).</span>
         </div>
       </div>
-    </div>
 
-    <div class="setting-row">
-      <div class="setting-label" style="width:100%">
-        <strong>GitHub token (to save settings)</strong>
-        <span>Your token is stored only in this browser — never sent anywhere except GitHub's API.</span>
-        <div class="token-row">
-          <input type="password" id="gh-token" class="token-input"
-                 placeholder="ghp_xxxxxxxxxxxxxxxxxxxx"
-                 oninput="markDirty()">
+      <div class="setting-row">
+        <label class="toggle"><input type="checkbox" id="tog-deal"><span class="slider"></span></label>
+        <div class="setting-info">
+          <strong>Alert me when a deal is found under</strong>
+          <span>Instant email when any flight drops below your price threshold.</span>
+          <div class="threshold-row">
+            <span style="font-size:.82rem">€</span>
+            <input type="number" id="threshold" class="threshold-input" min="200" max="599" value="450">
+            <span style="font-size:.82rem;color:var(--text2)">per person</span>
+          </div>
         </div>
-        <div class="info-box" style="margin-top:8px">
-          Need a token? 
-          <a href="https://github.com/settings/tokens/new?description=flight-tracker&scopes=repo"
-             target="_blank">Generate one here</a> — check only the <strong>repo</strong> scope.
-          It's saved in your browser's localStorage and only used to update
-          <code>notification_config.json</code> in your repo.
+      </div>
+
+      <div class="setting-row">
+        <div class="setting-info" style="width:100%">
+          <strong>GitHub token (to save settings)</strong>
+          <span>Stored only in this browser — never sent anywhere except GitHub's API.</span>
+          <input type="password" id="gh-token" class="token-input" placeholder="ghp_xxxxxxxxxxxxxxxxxxxx">
+          <div class="info-box">
+            Need one? <a href="https://github.com/settings/tokens/new?description=flight-tracker&scopes=repo" target="_blank">Generate here</a>
+            — tick only the <strong>repo</strong> scope.
+          </div>
         </div>
+      </div>
+
+      <div class="save-row">
+        <button class="save-btn" id="save-btn" onclick="saveSettings()">Save settings</button>
+        <span class="save-status" id="save-status"></span>
+      </div>
+      <div class="saved-bar" id="saved-bar">
+        <strong>Currently saved in GitHub:</strong><br>
+        <span id="saved-run"></span><br>
+        <span id="saved-deal"></span>
       </div>
     </div>
 
-    <div style="display:flex;align-items:center;gap:12px;margin-top:4px;flex-wrap:wrap">
-      <button class="save-btn" id="save-btn" onclick="saveSettings()" disabled>
-        Save settings
-      </button>
-      <span class="save-status" id="save-status"></span>
-    </div>
-    <div id="saved-state-bar" style="display:none;margin-top:12px;padding:10px 14px;
-        background:#f8fafc;border:1px solid var(--border);border-radius:8px;
-        font-size:.78rem;color:var(--text2);line-height:1.8">
-      <strong style="color:var(--text);font-size:.8rem">Currently saved in GitHub:</strong><br>
-      <span id="saved-run-state"></span><br>
-      <span id="saved-deal-state"></span>
-    </div>
-  </div>
-
-  <div class="alert">
-      <b>🛂 Transit visa reminder</b>
-      Avoid <strong>London</strong> (LHR/LGW/LCY/STN/LTN) and all
-      <strong>Middle East airports</strong> (Dubai, Doha, Abu Dhabi, Riyadh, Kuwait, Bahrain, Muscat, Amman, Beirut, Tel Aviv…).
+    <!-- Alert -->
+    <div class="alert">
+      <strong>🛂 Transit visa reminder</strong>
+      Avoid <strong>London</strong> (LHR/LGW/LCY/STN/LTN) and all <strong>Middle East airports</strong>
+      (Dubai, Doha, Abu Dhabi, Riyadh, Kuwait, Bahrain, Muscat, Amman, Beirut, Tel Aviv…).
       Safe hubs: Singapore · Bangkok · KL · Hong Kong · Taipei · Seoul · Beijing · Shanghai · Guangzhou · Tokyo · Frankfurt · Paris · Istanbul.
     </div>
 
-    <div id="status"><div class="status-dot" id="sdot"></div><span id="stext">Loading…</span></div>
+    <!-- Status -->
+    <div id="status"><div class="sdot" id="sdot"></div><span id="stext">Loading data…</span></div>
 
+    <!-- Flight panel -->
     <div id="panel-content">
-      <div class="empty">
-        <div class="icon">✈</div>
+      <div class="empty"><div class="icon">✈</div>
         <p>Select a date on the left to see available flights.<br>
-        Run <code>python flight_tracker.py</code> to fetch live data,<br>
-        or wait for the daily 9am auto-check.</p>
+        Prices update automatically twice daily via GitHub Actions.</p>
       </div>
     </div>
+
   </div>
 </main>
 
 <script>
-// ──────────────────────────────────────────────────────
-// Config
-// ──────────────────────────────────────────────────────
+// ── Config ────────────────────────────────────────────
+const GH_OWNER = "Ymirthebear";
+const GH_REPO  = "flight-tracker";
+
 const PREFERRED = new Set([
-  "2026-08-18","2026-08-19","2026-08-20","2026-08-21","2026-08-22",
-  "2026-08-23","2026-08-24","2026-08-25","2026-08-26","2026-08-27",
-  "2026-08-28","2026-08-29","2026-08-30","2026-08-31"
+  "2026-08-18","2026-08-19","2026-08-20","2026-08-21","2026-08-22","2026-08-23","2026-08-24",
+  "2026-08-25","2026-08-26","2026-08-27","2026-08-28","2026-08-29","2026-08-30","2026-08-31"
 ]);
 const ALL_DATES = [
-  "2026-08-18","2026-08-19","2026-08-20","2026-08-21","2026-08-22",
-  "2026-08-23","2026-08-24","2026-08-25","2026-08-26","2026-08-27",
-  "2026-08-28","2026-08-29","2026-08-30","2026-08-31",
+  "2026-08-18","2026-08-19","2026-08-20","2026-08-21","2026-08-22","2026-08-23","2026-08-24",
+  "2026-08-25","2026-08-26","2026-08-27","2026-08-28","2026-08-29","2026-08-30","2026-08-31",
   "2026-09-01","2026-09-02","2026-09-03"
 ];
-const DESTINATIONS = {
-  "AMS": "Amsterdam",
-  "DUS": "Düsseldorf",
-  "BRU": "Brussels",
-};
-
-// Hub colour coding
+const DESTINATIONS = { AMS:"Amsterdam", DUS:"Düsseldorf", BRU:"Brussels" };
 const HUB_CLASS = {
-  SIN:"sea",BKK:"sea",DMK:"sea",KUL:"sea",MNL:"sea",
-  HKG:"",TPE:"",NRT:"",HND:"",KIX:"",
-  ICN:"korea",GMP:"korea",
-  PEK:"china",PKX:"china",PVG:"china",SHA:"china",
-  CAN:"china",SZX:"china",CTU:"china",XIY:"china",CKG:"china",
+  SIN:"sea",BKK:"sea",DMK:"sea",KUL:"sea",MNL:"sea",HKG:"",TPE:"",
+  NRT:"",HND:"",KIX:"",ICN:"korea",GMP:"korea",
+  PEK:"china",PKX:"china",PVG:"china",SHA:"china",CAN:"china",
+  SZX:"china",CTU:"china",XIY:"china",CKG:"china",
   FRA:"europe",CDG:"europe",MUC:"europe",ZRH:"europe",
   BRU:"europe",VIE:"europe",IST:"europe",
 };
 
-function hubClass(code){ return HUB_CLASS[code.toUpperCase()] ?? ""; }
-
-function skyscannerUrl(d) {
-  const [y,m,day] = d.split("-");
-  return `https://www.skyscanner.net/transport/flights/han/ams/${y.slice(2)+m+day}/?adults=1&currency=EUR&cabinclass=economy`;
-}
-function googleUrl(d) {
-  return `https://www.google.com/travel/flights/search?q=Flights+from+Hanoi+to+Amsterdam+on+${d}&hl=en&curr=EUR`;
-}
-function kayakUrl(d) {
-  return `https://www.kayak.com/flights/HAN-AMS/${d}?sort=price_a&fs=maxstops=2`;
-}
-
-// ──────────────────────────────────────────────────────
-// State
-// ──────────────────────────────────────────────────────
-let DATA = null;           // full flights_data.json
+// ── State ─────────────────────────────────────────────
+let DATA       = null;
 let activeDate = null;
-
-// ──────────────────────────────────────────────────────
-// Sidebar
-// ──────────────────────────────────────────────────────
 let activeDest = "AMS";
 
+// ── URL builders ──────────────────────────────────────
+function gfUrl(date, dest)  {
+  const n = DESTINATIONS[dest] || "Amsterdam";
+  return `https://www.google.com/travel/flights/search?q=Flights+from+Hanoi+to+${encodeURIComponent(n)}+on+${date}&hl=en&curr=EUR`;
+}
+function skyUrl(date, dest) {
+  const [y,m,d] = date.split("-");
+  return `https://www.skyscanner.net/transport/flights/han/${(dest||"AMS").toLowerCase()}/${y.slice(2)+m+d}/?adults=1&currency=EUR&cabinclass=economy`;
+}
+function kayUrl(date, dest) {
+  return `https://www.kayak.com/flights/HAN-${dest||"AMS"}/${date}?sort=price_a&fs=maxstops=2`;
+}
+
+// ── Sidebar ───────────────────────────────────────────
 function buildSidebar() {
+  // Destination tabs
+  const tabsEl = document.getElementById("dest-tabs");
+  tabsEl.innerHTML = "";
+  Object.entries(DESTINATIONS).forEach(([code, name]) => {
+    const btn = document.createElement("button");
+    btn.className = "dest-tab" + (code === activeDest ? " active" : "");
+    btn.textContent = code;
+    btn.title = name;
+    btn.onclick = () => { activeDest = code; buildSidebar(); };
+    tabsEl.appendChild(btn);
+  });
+
+  // Date list
   const list = document.getElementById("date-list");
   list.innerHTML = "";
-
-  // Destination tabs
-  const tabRow = document.createElement("div");
-  tabRow.style.cssText = "display:flex;gap:4px;margin-bottom:12px;";
-  Object.entries(DESTINATIONS).forEach(([code, name]) => {
-    const tab = document.createElement("button");
-    tab.id = "dest-tab-" + code;
-    tab.textContent = code;
-    tab.title = name;
-    tab.style.cssText = `flex:1;padding:5px 4px;border-radius:6px;border:1.5px solid var(--border);
-      font-size:.75rem;font-weight:700;cursor:pointer;font-family:inherit;
-      background:${code===activeDest?"#1e3a5f":"#fff"};
-      color:${code===activeDest?"#fff":"var(--text2)"};transition:all .15s;`;
-    tab.onclick = () => { activeDest = code; buildSidebar(); };
-    tabRow.appendChild(tab);
-  });
-  list.appendChild(tabRow);
-
   let lastMonth = null;
+
   ALL_DATES.forEach(d => {
-    const pref = PREFERRED.has(d);
-    const jsDate = new Date(d + "T12:00:00");
-    const month = jsDate.toLocaleDateString("en-GB", { month:"long", year:"numeric" });
-    const weekday = jsDate.toLocaleDateString("en-GB", { weekday:"short" });
-    const dayNum  = jsDate.getDate();
-    const monthShort = jsDate.toLocaleDateString("en-GB", { month:"short" });
+    const pref   = PREFERRED.has(d);
+    const dt     = new Date(d + "T12:00:00");
+    const month  = dt.toLocaleDateString("en-GB", { month:"long", year:"numeric" });
+    const wday   = dt.toLocaleDateString("en-GB", { weekday:"short" });
+    const dayNum = dt.getDate();
+    const mon    = dt.toLocaleDateString("en-GB", { month:"short" });
 
     if (month !== lastMonth) {
       const lbl = document.createElement("div");
-      lbl.style.cssText = "font-size:.68rem;font-weight:700;letter-spacing:.6px;color:#94a3b8;text-transform:uppercase;padding:10px 10px 4px;";
+      lbl.className = "month-label";
       lbl.textContent = month;
       list.appendChild(lbl);
       lastMonth = month;
     }
 
-    const key = `${d}_${activeDest}`;
-    const flights = DATA?.flights_by_date?.[key] ?? DATA?.flights_by_date?.[d] ?? [];
+    const key     = `${d}_${activeDest}`;
+    const flights = DATA?.flights_by_date?.[key] ?? [];
     const cheapest = flights.length ? Math.min(...flights.map(f => f.price_eur)) : null;
 
     const btn = document.createElement("button");
-    btn.className = "date-btn";
+    btn.className = "date-btn" + (d === activeDate && activeDest === (btn._dest || activeDest) ? " active" : "");
     btn.id = `btn-${d}-${activeDest}`;
     btn.onclick = () => showDate(d, activeDest);
     btn.innerHTML = `
-      <div class="${pref ? "dot-pref" : "dot-ok"}"></div>
-      <div class="label">
-        <div class="d">${weekday} ${dayNum} ${monthShort}</div>
+      <div class="${pref ? "dot-g" : "dot-a"}"></div>
+      <div class="lbl">
+        <div class="d">${wday} ${dayNum} ${mon}</div>
         <div class="sub">${pref ? "★ Preferred" : "◆ Acceptable"}</div>
       </div>
       ${cheapest !== null
-        ? `<div class="best-price">€${Math.round(cheapest)}</div>`
-        : `<div class="no-data">${DATA ? "no data" : "—"}</div>`}
-    `;
+        ? `<div class="pr">€${Math.round(cheapest)}</div>`
+        : `<div class="nd">${DATA ? "no data" : "—"}</div>`}`;
     list.appendChild(btn);
   });
+
+  // Re-highlight active
+  if (activeDate) {
+    document.querySelectorAll(".date-btn").forEach(b => b.classList.remove("active"));
+    document.getElementById(`btn-${activeDate}-${activeDest}`)?.classList.add("active");
+  }
 }
 
-// ──────────────────────────────────────────────────────
-// Panel
-// ──────────────────────────────────────────────────────
-function showDate(d, dest) {
-  dest = dest || activeDest;
-  // Update active state
-  if (activeDate) document.getElementById(`btn-${activeDate}-${activeDest}`)?.classList.remove("active");
-  activeDate = d;
-  document.getElementById(`btn-${d}-${dest}`)?.classList.add("active");
+// ── Flight panel ──────────────────────────────────────
+function showDate(date, dest) {
+  activeDate = date; activeDest = dest;
+  document.querySelectorAll(".date-btn").forEach(b => b.classList.remove("active"));
+  document.getElementById(`btn-${date}-${dest}`)?.classList.add("active");
 
-  const pref = PREFERRED.has(d);
-  const jsDate = new Date(d + "T12:00:00");
+  const pref     = PREFERRED.has(date);
   const destName = DESTINATIONS[dest] || dest;
-  const dateLabel = jsDate.toLocaleDateString("en-GB", { weekday:"long", day:"numeric", month:"long", year:"numeric" });
-  const key = `${d}_${dest}`;
-  const flights = DATA?.flights_by_date?.[key] ?? DATA?.flights_by_date?.[d] ?? [];
-
-  const content = document.getElementById("panel-content");
+  const dt       = new Date(date + "T12:00:00");
+  const dateLabel = dt.toLocaleDateString("en-GB", { weekday:"long", day:"numeric", month:"long", year:"numeric" });
+  const key      = `${date}_${dest}`;
+  const flights  = DATA?.flights_by_date?.[key] ?? [];
+  const content  = document.getElementById("panel-content");
 
   if (!DATA) {
-    content.innerHTML = `<div class="no-flights"><p>No data loaded yet.<br>Run <code>python flight_tracker.py</code> first.</p></div>`;
+    content.innerHTML = `<div class="no-flights"><p>No data loaded yet. Wait for the next scheduled run or trigger it manually via GitHub Actions.</p></div>`;
     return;
   }
 
-  const refreshLinks = `
-    <div class="refresh-bar">
-      <span style="font-size:.78rem;color:var(--gray)">Search live (→ ${destName}):</span>
-      <a href="${googleUrl(d, destName)}" target="_blank">Google Flights</a>
-      <span class="sep">|</span>
-      <a href="${skyscannerUrl(d, dest)}" target="_blank">Skyscanner</a>
-      <span class="sep">|</span>
-      <a href="${kayakUrl(d, dest)}" target="_blank">Kayak</a>
+  const searchBar = `
+    <div class="search-live">
+      <span>Search live (→ ${destName}):</span>
+      <a href="${gfUrl(date,dest)}"  target="_blank">Google Flights</a> ·
+      <a href="${skyUrl(date,dest)}" target="_blank">Skyscanner</a> ·
+      <a href="${kayUrl(date,dest)}" target="_blank">Kayak</a>
     </div>`;
 
   if (!flights.length) {
     content.innerHTML = `
-      <div class="panel-header">
+      <div class="panel-hdr" style="margin-bottom:14px">
         <h2>${dateLabel}</h2>
         <div class="meta">
-          <span>${pref ? "★ Preferred date" : "◆ Acceptable date"}</span>
+          <span>${pref ? "🟢 Preferred" : "🟡 Acceptable"}</span>
+          <span>🛬 To ${destName} (${dest})</span>
         </div>
       </div>
-      ${refreshLinks}
-      <div class="no-flights">
-        <p>No flights found under €${DATA.config?.max_price_eur ?? 600} for this date in the last tracker run.<br>
-        Try searching live on the sites above — filter to max 2 stops and avoid Middle East/London connections.</p>
-      </div>`;
+      ${searchBar}
+      <div class="no-flights"><p>No flights found under €600 for this date.<br>Try the live search links above.</p></div>`;
     return;
   }
 
   const cards = flights.map((f, i) => {
-    const rank = i + 1;
-    const rankClass = rank === 1 ? "gold" : "";
-    const topPick = rank === 1 ? "top-pick" : "";
+    const rank      = i + 1;
+    const src       = f.source || "sample";
+    const fDest     = f.destination || dest;
+    const fDestName = f.destination_name || destName;
+    const stops     = f.stops != null ? `${f.stops} stop${f.stops===1?"":"s"}` : "? stops";
+    const layovers  = (f.layovers || []).map(l =>
+      `<span class="hub ${HUB_CLASS[l]||""}">${l}</span>`).join(" → ");
 
-    const layoverHtml = (f.layovers ?? []).length
-      ? f.layovers.map(l => {
-          const cls = hubClass(l);
-          return `<span class="stop-tag ${cls}">${l}</span>`;
-        }).join(" → ")
-      : "";
-
-    const stopsText = f.stops != null
-      ? `${f.stops} stop${f.stops === 1 ? "" : "s"}`
-      : "stops unknown";
-
-    const routeHtml = (f.departs || f.arrives)
-      ? `<span>${f.departs ?? "?"}</span>
-         <span style="color:#cbd5e1">──✈──</span>
-         <span class="arr">${f.arrives ?? "?"}</span>`
-      : `<span style="color:#cbd5e1">times not recorded</span>`;
-
-    const durationHtml = f.duration
-      ? `<span>⏱ ${f.duration}</span>` : "";
-
-    // Show only the booking button for the site this flight was found on
-    const source = f.source ?? "sample";
-    let bookBtn = "";
-    const fDest     = f.destination || activeDest;
-    const fDestName = f.destination_name || DESTINATIONS[fDest] || fDest;
-    if (source.includes("google")) {
-      bookBtn = `<a class="book-btn book-gf" href="${googleUrl(activeDate, fDestName)}" target="_blank">🔍 Book on Google Flights</a>`;
-    } else if (source.includes("skyscanner")) {
-      bookBtn = `<a class="book-btn book-sky" href="${skyscannerUrl(activeDate, fDest)}" target="_blank">🔍 Book on Skyscanner</a>`;
-    } else if (source.includes("kayak")) {
-      bookBtn = `<a class="book-btn book-kay" href="${kayakUrl(activeDate, fDest)}" target="_blank">🔍 Book on Kayak</a>`;
-    } else {
-      bookBtn = `
-        <span class="book-label">Search on:</span>
-        <a class="book-btn book-gf"  href="${googleUrl(activeDate, fDestName)}"    target="_blank">Google Flights</a>
-        <a class="book-btn book-sky" href="${skyscannerUrl(activeDate, fDest)}"     target="_blank">Skyscanner</a>
-        <a class="book-btn book-kay" href="${kayakUrl(activeDate, fDest)}"          target="_blank">Kayak</a>`;
-    }
+    // Booking button — one site only based on source
+    let bookBtn;
+    if (src.includes("google"))     bookBtn = `<a class="book-btn btn-gf"  href="${gfUrl(date,fDest)}"  target="_blank">🔍 Book on Google Flights</a>`;
+    else if (src.includes("sky"))   bookBtn = `<a class="book-btn btn-sky" href="${skyUrl(date,fDest)}" target="_blank">🔍 Book on Skyscanner</a>`;
+    else if (src.includes("kayak")) bookBtn = `<a class="book-btn btn-kay" href="${kayUrl(date,fDest)}" target="_blank">🔍 Book on Kayak</a>`;
+    else bookBtn = `
+      <span class="book-lbl">Search on:</span>
+      <a class="book-btn btn-gf"  href="${gfUrl(date,fDest)}"  target="_blank">Google Flights</a>
+      <a class="book-btn btn-sky" href="${skyUrl(date,fDest)}" target="_blank">Skyscanner</a>
+      <a class="book-btn btn-kay" href="${kayUrl(date,fDest)}" target="_blank">Kayak</a>`;
 
     return `
-      <div class="flight-card ${topPick}">
-        <div class="flight-rank ${rankClass}">${rank === 1 ? "🥇" : rank}</div>
-        <div class="flight-info">
-          <div class="flight-airline">${f.airline ?? "Unknown airline"}</div>
-          <div class="flight-route">${routeHtml}</div>
-          <div class="flight-stops">
-            <span style="font-size:.78rem;color:var(--gray)">${stopsText}</span>
-            ${layoverHtml}
-          </div>
-          ${f.duration ? `<div class="flight-duration">⏱ ${f.duration}</div>` : ""}
+      <div class="flight-card${rank===1?" best":""}">
+        <div class="rank">${rank===1?"🥇":rank}</div>
+        <div>
+          <div class="airline">${f.airline||"Unknown"}</div>
+          <div class="route">${f.departs||"??"} ──✈── ${f.arrives||"??"}</div>
+          <div class="hubs">${layovers||'<span style="color:#cbd5e1;font-size:.78rem">direct</span>'}</div>
+          ${f.duration ? `<div class="dur">⏱ ${f.duration} · ${stops}</div>` : ""}
           <div class="book-row">${bookBtn}</div>
         </div>
-        <div class="flight-price">
+        <div class="price-col">
           <div class="amount">€${Math.round(f.price_eur)}</div>
-          <div class="eur">per person · economy</div>
-          <div class="stops-label">${stopsText}</div>
-          ${rank === 1 ? `<div class="badge-best">Best deal</div>` : ""}
+          <div class="sub">economy · 1 adult</div>
+          ${rank===1?'<div class="badge-best">Best deal</div>':""}
         </div>
       </div>`;
   }).join("");
 
   content.innerHTML = `
-    <div class="panel-header">
+    <div class="panel-hdr" style="margin-bottom:14px">
       <h2>${dateLabel}</h2>
       <div class="meta">
-        <span>${pref ? "🟢 Preferred date" : "🟡 Acceptable date"}</span>
+        <span>${pref ? "🟢 Preferred" : "🟡 Acceptable"}</span>
         <span>🛬 To ${destName} (${dest})</span>
-        <span>✈ ${flights.length} flight${flights.length !== 1 ? "s" : ""} found</span>
-        <span>💶 From €${Math.round(Math.min(...flights.map(f => f.price_eur)))}</span>
+        <span>✈ ${flights.length} flight${flights.length!==1?"s":""}</span>
+        <span>💶 From €${Math.round(Math.min(...flights.map(f=>f.price_eur)))}</span>
       </div>
     </div>
-    ${refreshLinks}
+    ${searchBar}
     <div class="flight-list">${cards}</div>`;
 }
 
-// ──────────────────────────────────────────────────────
-// Load data
-// ──────────────────────────────────────────────────────
-async function init() {
-  const sdot  = document.getElementById("sdot");
-  const stext = document.getElementById("stext");
-
-  try {
-    // Load notification config for settings panel
-    try {
-      const cr = await fetch("notification_config.json?" + Date.now());
-      if (cr.ok) loadSettings(await cr.json());
-    } catch {}
-
-    const r = await fetch("flights_data.json?" + Date.now());
-    if (!r.ok) throw new Error("not found");
-    DATA = await r.json();
-
-    const allFlights = Object.values(DATA.flights_by_date ?? {}).flat();
-    const updated = DATA.last_updated
-      ? new Date(DATA.last_updated).toLocaleString("en-GB")
-      : "unknown";
-
-    if (allFlights.length > 0) {
-      const cheapest = Math.min(...allFlights.map(f => f.price_eur));
-      sdot.className = "status-dot green";
-      stext.textContent =
-        `✓ Live data · ${allFlights.length} flight(s) across all dates · cheapest €${Math.round(cheapest)} · updated ${updated}`;
-    } else {
-      sdot.className = "status-dot amber";
-      stext.textContent = `Data loaded but no flights found under €600. Updated ${updated}. Try the live search links.`;
-    }
-  } catch {
-    sdot.className = "status-dot";
-    stext.textContent = "No saved data yet — run python flight_tracker.py or wait for the 9am daily check.";
-  }
-
-  buildSidebar();
-}
-
-init();
-
-// ──────────────────────────────────────────────────────
-// Notification settings
-// ──────────────────────────────────────────────────────
-const GH_OWNER = "Ymirthebear";
-const GH_REPO  = "flight-tracker";
-
-function loadSettings(cfg) {
-  document.getElementById("toggle-run").checked  = !!cfg.notify_on_run;
-  document.getElementById("toggle-deal").checked = !!cfg.notify_on_deal;
-  const t = cfg.deal_threshold_eur ?? 450;
-  document.getElementById("threshold").value = t;
-
+// ── Notification settings ─────────────────────────────
+function applySettings(cfg) {
+  document.getElementById("tog-run").checked  = !!cfg.notify_on_run;
+  document.getElementById("tog-deal").checked = !!cfg.notify_on_deal;
+  document.getElementById("threshold").value  = cfg.deal_threshold_eur ?? 450;
   // Show saved state bar
-  const bar = document.getElementById("saved-state-bar");
-  if (bar) {
-    bar.style.display = "block";
-    const runIcon  = cfg.notify_on_run  ? "✅" : "⬜";
-    const dealIcon = cfg.notify_on_deal ? "✅" : "⬜";
-    document.getElementById("saved-run-state").textContent =
-      `${runIcon} Email after every run: ${cfg.notify_on_run ? "ON" : "OFF"}`;
-    document.getElementById("saved-deal-state").textContent =
-      `${dealIcon} Deal alert under €${cfg.deal_threshold_eur ?? 450}: ${cfg.notify_on_deal ? "ON" : "OFF"}`;
-  }
-}
-
-function markDirty() {
-  document.getElementById("save-btn").disabled = false;
-  document.getElementById("save-status").textContent = "Unsaved changes";
-  const stored = localStorage.getItem("gh_token");
-  const el = document.getElementById("gh-token");
-  if (stored && !el.value) el.value = stored;
+  const bar = document.getElementById("saved-bar");
+  bar.style.display = "block";
+  document.getElementById("saved-run").textContent  =
+    `${cfg.notify_on_run  ? "✅" : "⬜"} Email after every run: ${cfg.notify_on_run  ? "ON" : "OFF"}`;
+  document.getElementById("saved-deal").textContent =
+    `${cfg.notify_on_deal ? "✅" : "⬜"} Deal alert under €${cfg.deal_threshold_eur ?? 450}: ${cfg.notify_on_deal ? "ON" : "OFF"}`;
 }
 
 async function saveSettings() {
   const btn    = document.getElementById("save-btn");
   const status = document.getElementById("save-status");
   const token  = document.getElementById("gh-token").value.trim();
-  if (!token) {
-    status.textContent = "⚠ Paste your GitHub token first.";
-    status.style.color = "#dc2626";
-    return;
-  }
+  if (!token) { status.textContent = "⚠ Paste your GitHub token first."; status.style.color="#dc2626"; return; }
   localStorage.setItem("gh_token", token);
+
   const cfg = {
-    email: "fangsterthefirst@gmail.com",
-    notify_on_run:      document.getElementById("toggle-run").checked,
-    notify_on_deal:     document.getElementById("toggle-deal").checked,
+    email:              "fangsterthefirst@gmail.com",
+    notify_on_run:      document.getElementById("tog-run").checked,
+    notify_on_deal:     document.getElementById("tog-deal").checked,
     deal_threshold_eur: parseInt(document.getElementById("threshold").value, 10),
   };
-  btn.disabled = true;
-  btn.textContent = "Saving…";
-  status.textContent = "";
-  status.style.color = "var(--gray)";
+
+  btn.textContent = "Saving…"; btn.disabled = true; status.textContent = ""; status.style.color="var(--gray)";
+
   try {
-    const getRes = await fetch(
-      `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/notification_config.json`,
-      { headers: { Authorization: `Bearer ${token}`, Accept: "application/vnd.github+json" } }
-    );
-    const getSha = getRes.ok ? (await getRes.json()).sha : undefined;
-    const content = btoa(JSON.stringify(cfg, null, 2));
-    const body = { message: "update notification config", content };
-    if (getSha) body.sha = getSha;
-    const putRes = await fetch(
-      `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/notification_config.json`,
-      { method: "PUT",
-        headers: { Authorization: `Bearer ${token}`, Accept: "application/vnd.github+json",
-                   "Content-Type": "application/json" },
-        body: JSON.stringify(body) }
-    );
-    if (putRes.ok) {
-      btn.textContent = "Save settings";
-      status.textContent = "✓ Saved to GitHub!";
-      status.style.color = "var(--green)";
-      loadSettings(cfg);   // refresh the saved state bar
-      setTimeout(() => { status.textContent = ""; btn.disabled = true; }, 3000);
+    const getR = await fetch(`https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/notification_config.json`,
+      { headers: { Authorization:`Bearer ${token}`, Accept:"application/vnd.github+json" } });
+    const sha  = getR.ok ? (await getR.json()).sha : undefined;
+    const body = { message:"update notification config", content:btoa(JSON.stringify(cfg,null,2)) };
+    if (sha) body.sha = sha;
+    const putR = await fetch(`https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/notification_config.json`,
+      { method:"PUT", headers:{ Authorization:`Bearer ${token}`, Accept:"application/vnd.github+json", "Content-Type":"application/json" },
+        body:JSON.stringify(body) });
+    if (putR.ok) {
+      status.textContent = "✓ Saved!"; status.style.color = "var(--green)";
+      applySettings(cfg);
+      setTimeout(() => { status.textContent = ""; }, 3000);
     } else {
-      const err = await putRes.json();
-      throw new Error(err.message || putRes.status);
+      const e = await putR.json(); throw new Error(e.message || putR.status);
     }
-  } catch (e) {
-    btn.textContent = "Save settings";
-    btn.disabled = false;
-    status.textCo
+  } catch(e) {
+    status.textContent = `✗ ${e.message}`; status.style.color = "#dc2626";
+  }
+  btn.textContent = "Save settings"; btn.disabled = false;
+}
+
+// ── Init ──────────────────────────────────────────────
+async function init() {
+  // Restore token
+  const stored = localStorage.getItem("gh_token");
+  if (stored) {
+    const el = document.getElementById("gh-token");
+    el.value = stored; el.placeholder = "Token loaded from browser";
+  }
+
+  const sdot  = document.getElementById("sdot");
+  const stext = document.getElementById("stext");
+
+  try {
+    // Load notification config
+    try {
+      const cr = await fetch(`notification_config.json?t=${Date.now()}`);
+      if (cr.ok) applySettings(await cr.json());
+    } catch {}
+
+    // Load flight data
+    const r = await fetch(`flights_data.json?t=${Date.now()}`);
+    if (!r.ok) throw new Error("flights_data.json not found");
+    DATA = await r.json();
+
+    const all = Object.values(DATA.flights_by_date ?? {}).flat();
+    if (all.length > 0) {
+      const cheapest = Math.min(...all.map(f => f.price_eur));
+      sdot.className = "sdot green";
+      const updated  = DATA.last_updated ? new Date(DATA.last_updated).toLocaleString("en-GB") : "?";
+      stext.textContent = `✓ ${all.length} flights across all dates · cheapest €${Math.round(cheapest)} · updated ${updated}`;
+    } else {
+      sdot.className = "sdot amber";
+      stext.textContent = "Data loaded but no flights found yet — trigger a run via GitHub Actions.";
+    }
+  } catch(e) {
+    sdot.className = "sdot";
+    stext.textContent = "No flight data yet — trigger the workflow in GitHub Actions to fetch live prices.";
+  }
+
+  buildSidebar();
+}
+
+init();
+</script>
+</body>
+</html>
