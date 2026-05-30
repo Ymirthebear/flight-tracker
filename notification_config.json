@@ -2,5 +2,5 @@
   "email": "fangsterthefirst@gmail.com",
   "notify_on_run": true,
   "notify_on_deal": true,
-  "deal_threshold_eur": 700
+  "deal_threshold_eur": 600
 }
