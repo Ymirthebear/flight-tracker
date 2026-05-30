@@ -201,11 +201,18 @@ main{display:grid;grid-template-columns:260px 1fr;gap:0;min-height:calc(100vh - 
       </div>
     </div>
 
-    <div style="display:flex;align-items:center;margin-top:4px">
+    <div style="display:flex;align-items:center;gap:12px;margin-top:4px;flex-wrap:wrap">
       <button class="save-btn" id="save-btn" onclick="saveSettings()" disabled>
         Save settings
       </button>
       <span class="save-status" id="save-status"></span>
+    </div>
+    <div id="saved-state-bar" style="display:none;margin-top:12px;padding:10px 14px;
+        background:#f8fafc;border:1px solid var(--border);border-radius:8px;
+        font-size:.78rem;color:var(--text2);line-height:1.8">
+      <strong style="color:var(--text);font-size:.8rem">Currently saved in GitHub:</strong><br>
+      <span id="saved-run-state"></span><br>
+      <span id="saved-deal-state"></span>
     </div>
   </div>
 
@@ -394,6 +401,10 @@ function showDate(d) {
     const durationHtml = f.duration
       ? `<span>⏱ ${f.duration}</span>` : "";
 
+    const gfLink  = googleUrl(activeDate);
+    const skyLink = skyscannerUrl(activeDate);
+    const kayLink = kayakUrl(activeDate);
+
     return `
       <div class="flight-card ${topPick}">
         <div class="flight-rank ${rankClass}">${rank === 1 ? "🥇" : rank}</div>
@@ -405,6 +416,12 @@ function showDate(d) {
             ${layoverHtml}
           </div>
           ${f.duration ? `<div class="flight-duration">⏱ ${f.duration}</div>` : ""}
+          <div class="book-row">
+            <span class="book-label">Book on:</span>
+            <a class="book-btn book-gf"  href="${gfLink}"  target="_blank">🔍 Google Flights</a>
+            <a class="book-btn book-sky" href="${skyLink}" target="_blank">🔍 Skyscanner</a>
+            <a class="book-btn book-kay" href="${kayLink}" target="_blank">🔍 Kayak</a>
+          </div>
         </div>
         <div class="flight-price">
           <div class="amount">€${Math.round(f.price_eur)}</div>
@@ -481,6 +498,18 @@ function loadSettings(cfg) {
   document.getElementById("toggle-deal").checked = !!cfg.notify_on_deal;
   const t = cfg.deal_threshold_eur ?? 450;
   document.getElementById("threshold").value = t;
+
+  // Show saved state bar
+  const bar = document.getElementById("saved-state-bar");
+  if (bar) {
+    bar.style.display = "block";
+    const runIcon  = cfg.notify_on_run  ? "✅" : "⬜";
+    const dealIcon = cfg.notify_on_deal ? "✅" : "⬜";
+    document.getElementById("saved-run-state").textContent =
+      `${runIcon} Email after every run: ${cfg.notify_on_run ? "ON" : "OFF"}`;
+    document.getElementById("saved-deal-state").textContent =
+      `${dealIcon} Deal alert under €${cfg.deal_threshold_eur ?? 450}: ${cfg.notify_on_deal ? "ON" : "OFF"}`;
+  }
 }
 
 function markDirty() {
@@ -531,6 +560,7 @@ async function saveSettings() {
       btn.textContent = "Save settings";
       status.textContent = "✓ Saved to GitHub!";
       status.style.color = "var(--green)";
+      loadSettings(cfg);   // refresh the saved state bar
       setTimeout(() => { status.textContent = ""; btn.disabled = true; }, 3000);
     } else {
       const err = await putRes.json();
