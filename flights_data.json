@@ -1,9 +1,13 @@
 {
-  "last_updated": "2026-05-30T18:33:38Z",
-  "note": "Live data — scraped by GitHub Actions",
+  "last_updated": "2026-05-30T18:00:00Z",
+  "note": "Sample data — will be replaced by live GitHub Actions scrape",
   "config": {
     "origin": "HAN",
-    "destination": "AMS",
+    "destinations": [
+      "AMS",
+      "DUS",
+      "BRU"
+    ],
     "max_price_eur": 600,
     "max_stops": 2,
     "preferred_dates": [
@@ -28,49 +32,7426 @@
       "2026-09-03"
     ],
     "banned_airports": [
-      "AMM",
-      "AUH",
-      "BAH",
-      "BEY",
-      "BGW",
-      "BSR",
-      "DMM",
-      "DOH",
-      "DWC",
-      "DXB",
-      "IKA",
-      "JED",
-      "KBL",
-      "KWI",
-      "LCY",
-      "LGW",
       "LHR",
+      "LGW",
+      "LCY",
+      "STN",
       "LTN",
+      "DXB",
+      "AUH",
+      "DOH",
+      "KWI",
+      "BAH",
       "MCT",
       "RUH",
-      "SHJ",
-      "STN",
+      "JED",
+      "DMM",
+      "AMM",
+      "BEY",
+      "TLV",
+      "BGW",
+      "BSR",
       "THR",
-      "TLV"
+      "IKA",
+      "SHJ",
+      "DWC"
     ]
   },
   "flights_by_date": {
-    "2026-08-18": [],
-    "2026-08-19": [],
-    "2026-08-20": [],
-    "2026-08-21": [],
-    "2026-08-22": [],
-    "2026-08-23": [],
-    "2026-08-24": [],
-    "2026-08-25": [],
-    "2026-08-26": [],
-    "2026-08-27": [],
-    "2026-08-28": [],
-    "2026-08-29": [],
-    "2026-08-30": [],
-    "2026-08-31": [],
-    "2026-09-01": [],
-    "2026-09-02": [],
-    "2026-09-03": []
+    "2026-08-18_AMS": [
+      {
+        "price_eur": 369,
+        "airline": "China Southern",
+        "stops": 2,
+        "layovers": [
+          "CAN",
+          "FRA"
+        ],
+        "duration": "22h 15m",
+        "departs": "08:05 HAN",
+        "arrives": "14:20 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 397,
+        "airline": "Air China",
+        "stops": 2,
+        "layovers": [
+          "PEK",
+          "FRA"
+        ],
+        "duration": "21h 55m",
+        "departs": "07:00 HAN",
+        "arrives": "05:55 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 423,
+        "airline": "China Eastern",
+        "stops": 2,
+        "layovers": [
+          "PVG",
+          "FRA"
+        ],
+        "duration": "21h 40m",
+        "departs": "09:10 HAN",
+        "arrives": "07:50 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 447,
+        "airline": "Cathay Pacific",
+        "stops": 1,
+        "layovers": [
+          "HKG"
+        ],
+        "duration": "17h 40m",
+        "departs": "17:15 HAN",
+        "arrives": "11:55 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 458,
+        "airline": "Singapore Airlines",
+        "stops": 1,
+        "layovers": [
+          "SIN"
+        ],
+        "duration": "18h 55m",
+        "departs": "00:40 HAN",
+        "arrives": "07:35 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 472,
+        "airline": "Turkish Airlines",
+        "stops": 1,
+        "layovers": [
+          "IST"
+        ],
+        "duration": "16h 50m",
+        "departs": "03:30 HAN",
+        "arrives": "10:20",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 488,
+        "airline": "Korean Air",
+        "stops": 2,
+        "layovers": [
+          "ICN",
+          "FRA"
+        ],
+        "duration": "24h 10m",
+        "departs": "09:30 HAN",
+        "arrives": "11:40 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 519,
+        "airline": "KLM",
+        "stops": 0,
+        "layovers": [],
+        "duration": "11h 50m",
+        "departs": "23:55 HAN",
+        "arrives": "11:45 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 548,
+        "airline": "EVA Air",
+        "stops": 2,
+        "layovers": [
+          "TPE",
+          "FRA"
+        ],
+        "duration": "23h 05m",
+        "departs": "16:20 HAN",
+        "arrives": "16:25 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 569,
+        "airline": "Vietnam Airlines + KLM",
+        "stops": 1,
+        "layovers": [
+          "CDG"
+        ],
+        "duration": "20h 10m",
+        "departs": "23:50 HAN",
+        "arrives": "17:00 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      }
+    ],
+    "2026-08-18_DUS": [
+      {
+        "price_eur": 343,
+        "airline": "China Southern",
+        "stops": 2,
+        "layovers": [
+          "CAN",
+          "FRA"
+        ],
+        "duration": "22h 15m",
+        "departs": "08:05 HAN",
+        "arrives": "14:20 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 369,
+        "airline": "Air China",
+        "stops": 2,
+        "layovers": [
+          "PEK",
+          "FRA"
+        ],
+        "duration": "21h 55m",
+        "departs": "07:00 HAN",
+        "arrives": "05:55 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 394,
+        "airline": "China Eastern",
+        "stops": 2,
+        "layovers": [
+          "PVG",
+          "FRA"
+        ],
+        "duration": "21h 40m",
+        "departs": "09:10 HAN",
+        "arrives": "07:50 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 415,
+        "airline": "Cathay Pacific",
+        "stops": 1,
+        "layovers": [
+          "HKG"
+        ],
+        "duration": "17h 40m",
+        "departs": "17:15 HAN",
+        "arrives": "11:55 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 426,
+        "airline": "Singapore Airlines",
+        "stops": 1,
+        "layovers": [
+          "SIN"
+        ],
+        "duration": "18h 55m",
+        "departs": "00:40 HAN",
+        "arrives": "07:35 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 439,
+        "airline": "Turkish Airlines",
+        "stops": 1,
+        "layovers": [
+          "IST"
+        ],
+        "duration": "16h 50m",
+        "departs": "03:30 HAN",
+        "arrives": "10:20",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 453,
+        "airline": "Korean Air",
+        "stops": 2,
+        "layovers": [
+          "ICN",
+          "FRA"
+        ],
+        "duration": "24h 10m",
+        "departs": "09:30 HAN",
+        "arrives": "11:40 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 483,
+        "airline": "KLM",
+        "stops": 0,
+        "layovers": [],
+        "duration": "11h 50m",
+        "departs": "23:55 HAN",
+        "arrives": "11:45 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 509,
+        "airline": "EVA Air",
+        "stops": 2,
+        "layovers": [
+          "TPE",
+          "FRA"
+        ],
+        "duration": "23h 05m",
+        "departs": "16:20 HAN",
+        "arrives": "16:25 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 529,
+        "airline": "Vietnam Airlines + KLM",
+        "stops": 1,
+        "layovers": [
+          "CDG"
+        ],
+        "duration": "20h 10m",
+        "departs": "23:50 HAN",
+        "arrives": "17:00 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      }
+    ],
+    "2026-08-18_BRU": [
+      {
+        "price_eur": 354,
+        "airline": "China Southern",
+        "stops": 2,
+        "layovers": [
+          "CAN",
+          "FRA"
+        ],
+        "duration": "22h 15m",
+        "departs": "08:05 HAN",
+        "arrives": "14:20 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 381,
+        "airline": "Air China",
+        "stops": 2,
+        "layovers": [
+          "PEK",
+          "FRA"
+        ],
+        "duration": "21h 55m",
+        "departs": "07:00 HAN",
+        "arrives": "05:55 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 406,
+        "airline": "China Eastern",
+        "stops": 2,
+        "layovers": [
+          "PVG",
+          "FRA"
+        ],
+        "duration": "21h 40m",
+        "departs": "09:10 HAN",
+        "arrives": "07:50 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 429,
+        "airline": "Cathay Pacific",
+        "stops": 1,
+        "layovers": [
+          "HKG"
+        ],
+        "duration": "17h 40m",
+        "departs": "17:15 HAN",
+        "arrives": "11:55 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 440,
+        "airline": "Singapore Airlines",
+        "stops": 1,
+        "layovers": [
+          "SIN"
+        ],
+        "duration": "18h 55m",
+        "departs": "00:40 HAN",
+        "arrives": "07:35 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 453,
+        "airline": "Turkish Airlines",
+        "stops": 1,
+        "layovers": [
+          "IST"
+        ],
+        "duration": "16h 50m",
+        "departs": "03:30 HAN",
+        "arrives": "10:20",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 468,
+        "airline": "Korean Air",
+        "stops": 2,
+        "layovers": [
+          "ICN",
+          "FRA"
+        ],
+        "duration": "24h 10m",
+        "departs": "09:30 HAN",
+        "arrives": "11:40 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 498,
+        "airline": "KLM",
+        "stops": 0,
+        "layovers": [],
+        "duration": "11h 50m",
+        "departs": "23:55 HAN",
+        "arrives": "11:45 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 526,
+        "airline": "EVA Air",
+        "stops": 2,
+        "layovers": [
+          "TPE",
+          "FRA"
+        ],
+        "duration": "23h 05m",
+        "departs": "16:20 HAN",
+        "arrives": "16:25 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 546,
+        "airline": "Vietnam Airlines + KLM",
+        "stops": 1,
+        "layovers": [
+          "CDG"
+        ],
+        "duration": "20h 10m",
+        "departs": "23:50 HAN",
+        "arrives": "17:00 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      }
+    ],
+    "2026-08-19_AMS": [
+      {
+        "price_eur": 376,
+        "airline": "China Southern",
+        "stops": 2,
+        "layovers": [
+          "CAN",
+          "FRA"
+        ],
+        "duration": "22h 15m",
+        "departs": "08:05 HAN",
+        "arrives": "14:20 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 405,
+        "airline": "Air China",
+        "stops": 2,
+        "layovers": [
+          "PEK",
+          "FRA"
+        ],
+        "duration": "21h 55m",
+        "departs": "07:00 HAN",
+        "arrives": "05:55 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 432,
+        "airline": "China Eastern",
+        "stops": 2,
+        "layovers": [
+          "PVG",
+          "FRA"
+        ],
+        "duration": "21h 40m",
+        "departs": "09:10 HAN",
+        "arrives": "07:50 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 456,
+        "airline": "Cathay Pacific",
+        "stops": 1,
+        "layovers": [
+          "HKG"
+        ],
+        "duration": "17h 40m",
+        "departs": "17:15 HAN",
+        "arrives": "11:55 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 467,
+        "airline": "Singapore Airlines",
+        "stops": 1,
+        "layovers": [
+          "SIN"
+        ],
+        "duration": "18h 55m",
+        "departs": "00:40 HAN",
+        "arrives": "07:35 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 482,
+        "airline": "Turkish Airlines",
+        "stops": 1,
+        "layovers": [
+          "IST"
+        ],
+        "duration": "16h 50m",
+        "departs": "03:30 HAN",
+        "arrives": "10:20",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 497,
+        "airline": "Korean Air",
+        "stops": 2,
+        "layovers": [
+          "ICN",
+          "FRA"
+        ],
+        "duration": "24h 10m",
+        "departs": "09:30 HAN",
+        "arrives": "11:40 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 529,
+        "airline": "KLM",
+        "stops": 0,
+        "layovers": [],
+        "duration": "11h 50m",
+        "departs": "23:55 HAN",
+        "arrives": "11:45 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 558,
+        "airline": "EVA Air",
+        "stops": 2,
+        "layovers": [
+          "TPE",
+          "FRA"
+        ],
+        "duration": "23h 05m",
+        "departs": "16:20 HAN",
+        "arrives": "16:25 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 580,
+        "airline": "Vietnam Airlines + KLM",
+        "stops": 1,
+        "layovers": [
+          "CDG"
+        ],
+        "duration": "20h 10m",
+        "departs": "23:50 HAN",
+        "arrives": "17:00 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      }
+    ],
+    "2026-08-19_DUS": [
+      {
+        "price_eur": 350,
+        "airline": "China Southern",
+        "stops": 2,
+        "layovers": [
+          "CAN",
+          "FRA"
+        ],
+        "duration": "22h 15m",
+        "departs": "08:05 HAN",
+        "arrives": "14:20 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 376,
+        "airline": "Air China",
+        "stops": 2,
+        "layovers": [
+          "PEK",
+          "FRA"
+        ],
+        "duration": "21h 55m",
+        "departs": "07:00 HAN",
+        "arrives": "05:55 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 401,
+        "airline": "China Eastern",
+        "stops": 2,
+        "layovers": [
+          "PVG",
+          "FRA"
+        ],
+        "duration": "21h 40m",
+        "departs": "09:10 HAN",
+        "arrives": "07:50 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 424,
+        "airline": "Cathay Pacific",
+        "stops": 1,
+        "layovers": [
+          "HKG"
+        ],
+        "duration": "17h 40m",
+        "departs": "17:15 HAN",
+        "arrives": "11:55 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 434,
+        "airline": "Singapore Airlines",
+        "stops": 1,
+        "layovers": [
+          "SIN"
+        ],
+        "duration": "18h 55m",
+        "departs": "00:40 HAN",
+        "arrives": "07:35 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 448,
+        "airline": "Turkish Airlines",
+        "stops": 1,
+        "layovers": [
+          "IST"
+        ],
+        "duration": "16h 50m",
+        "departs": "03:30 HAN",
+        "arrives": "10:20",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 462,
+        "airline": "Korean Air",
+        "stops": 2,
+        "layovers": [
+          "ICN",
+          "FRA"
+        ],
+        "duration": "24h 10m",
+        "departs": "09:30 HAN",
+        "arrives": "11:40 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 492,
+        "airline": "KLM",
+        "stops": 0,
+        "layovers": [],
+        "duration": "11h 50m",
+        "departs": "23:55 HAN",
+        "arrives": "11:45 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 519,
+        "airline": "EVA Air",
+        "stops": 2,
+        "layovers": [
+          "TPE",
+          "FRA"
+        ],
+        "duration": "23h 05m",
+        "departs": "16:20 HAN",
+        "arrives": "16:25 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 540,
+        "airline": "Vietnam Airlines + KLM",
+        "stops": 1,
+        "layovers": [
+          "CDG"
+        ],
+        "duration": "20h 10m",
+        "departs": "23:50 HAN",
+        "arrives": "17:00 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      }
+    ],
+    "2026-08-19_BRU": [
+      {
+        "price_eur": 361,
+        "airline": "China Southern",
+        "stops": 2,
+        "layovers": [
+          "CAN",
+          "FRA"
+        ],
+        "duration": "22h 15m",
+        "departs": "08:05 HAN",
+        "arrives": "14:20 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 388,
+        "airline": "Air China",
+        "stops": 2,
+        "layovers": [
+          "PEK",
+          "FRA"
+        ],
+        "duration": "21h 55m",
+        "departs": "07:00 HAN",
+        "arrives": "05:55 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 414,
+        "airline": "China Eastern",
+        "stops": 2,
+        "layovers": [
+          "PVG",
+          "FRA"
+        ],
+        "duration": "21h 40m",
+        "departs": "09:10 HAN",
+        "arrives": "07:50 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 437,
+        "airline": "Cathay Pacific",
+        "stops": 1,
+        "layovers": [
+          "HKG"
+        ],
+        "duration": "17h 40m",
+        "departs": "17:15 HAN",
+        "arrives": "11:55 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 448,
+        "airline": "Singapore Airlines",
+        "stops": 1,
+        "layovers": [
+          "SIN"
+        ],
+        "duration": "18h 55m",
+        "departs": "00:40 HAN",
+        "arrives": "07:35 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 462,
+        "airline": "Turkish Airlines",
+        "stops": 1,
+        "layovers": [
+          "IST"
+        ],
+        "duration": "16h 50m",
+        "departs": "03:30 HAN",
+        "arrives": "10:20",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 477,
+        "airline": "Korean Air",
+        "stops": 2,
+        "layovers": [
+          "ICN",
+          "FRA"
+        ],
+        "duration": "24h 10m",
+        "departs": "09:30 HAN",
+        "arrives": "11:40 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 508,
+        "airline": "KLM",
+        "stops": 0,
+        "layovers": [],
+        "duration": "11h 50m",
+        "departs": "23:55 HAN",
+        "arrives": "11:45 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 536,
+        "airline": "EVA Air",
+        "stops": 2,
+        "layovers": [
+          "TPE",
+          "FRA"
+        ],
+        "duration": "23h 05m",
+        "departs": "16:20 HAN",
+        "arrives": "16:25 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 557,
+        "airline": "Vietnam Airlines + KLM",
+        "stops": 1,
+        "layovers": [
+          "CDG"
+        ],
+        "duration": "20h 10m",
+        "departs": "23:50 HAN",
+        "arrives": "17:00 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      }
+    ],
+    "2026-08-20_AMS": [
+      {
+        "price_eur": 384,
+        "airline": "China Southern",
+        "stops": 2,
+        "layovers": [
+          "CAN",
+          "FRA"
+        ],
+        "duration": "22h 15m",
+        "departs": "08:05 HAN",
+        "arrives": "14:20 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 412,
+        "airline": "Air China",
+        "stops": 2,
+        "layovers": [
+          "PEK",
+          "FRA"
+        ],
+        "duration": "21h 55m",
+        "departs": "07:00 HAN",
+        "arrives": "05:55 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 440,
+        "airline": "China Eastern",
+        "stops": 2,
+        "layovers": [
+          "PVG",
+          "FRA"
+        ],
+        "duration": "21h 40m",
+        "departs": "09:10 HAN",
+        "arrives": "07:50 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 464,
+        "airline": "Cathay Pacific",
+        "stops": 1,
+        "layovers": [
+          "HKG"
+        ],
+        "duration": "17h 40m",
+        "departs": "17:15 HAN",
+        "arrives": "11:55 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 476,
+        "airline": "Singapore Airlines",
+        "stops": 1,
+        "layovers": [
+          "SIN"
+        ],
+        "duration": "18h 55m",
+        "departs": "00:40 HAN",
+        "arrives": "07:35 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 491,
+        "airline": "Turkish Airlines",
+        "stops": 1,
+        "layovers": [
+          "IST"
+        ],
+        "duration": "16h 50m",
+        "departs": "03:30 HAN",
+        "arrives": "10:20",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 507,
+        "airline": "Korean Air",
+        "stops": 2,
+        "layovers": [
+          "ICN",
+          "FRA"
+        ],
+        "duration": "24h 10m",
+        "departs": "09:30 HAN",
+        "arrives": "11:40 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 540,
+        "airline": "KLM",
+        "stops": 0,
+        "layovers": [],
+        "duration": "11h 50m",
+        "departs": "23:55 HAN",
+        "arrives": "11:45 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 569,
+        "airline": "EVA Air",
+        "stops": 2,
+        "layovers": [
+          "TPE",
+          "FRA"
+        ],
+        "duration": "23h 05m",
+        "departs": "16:20 HAN",
+        "arrives": "16:25 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 591,
+        "airline": "Vietnam Airlines + KLM",
+        "stops": 1,
+        "layovers": [
+          "CDG"
+        ],
+        "duration": "20h 10m",
+        "departs": "23:50 HAN",
+        "arrives": "17:00 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      }
+    ],
+    "2026-08-20_DUS": [
+      {
+        "price_eur": 357,
+        "airline": "China Southern",
+        "stops": 2,
+        "layovers": [
+          "CAN",
+          "FRA"
+        ],
+        "duration": "22h 15m",
+        "departs": "08:05 HAN",
+        "arrives": "14:20 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 383,
+        "airline": "Air China",
+        "stops": 2,
+        "layovers": [
+          "PEK",
+          "FRA"
+        ],
+        "duration": "21h 55m",
+        "departs": "07:00 HAN",
+        "arrives": "05:55 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 409,
+        "airline": "China Eastern",
+        "stops": 2,
+        "layovers": [
+          "PVG",
+          "FRA"
+        ],
+        "duration": "21h 40m",
+        "departs": "09:10 HAN",
+        "arrives": "07:50 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 432,
+        "airline": "Cathay Pacific",
+        "stops": 1,
+        "layovers": [
+          "HKG"
+        ],
+        "duration": "17h 40m",
+        "departs": "17:15 HAN",
+        "arrives": "11:55 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 443,
+        "airline": "Singapore Airlines",
+        "stops": 1,
+        "layovers": [
+          "SIN"
+        ],
+        "duration": "18h 55m",
+        "departs": "00:40 HAN",
+        "arrives": "07:35 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 456,
+        "airline": "Turkish Airlines",
+        "stops": 1,
+        "layovers": [
+          "IST"
+        ],
+        "duration": "16h 50m",
+        "departs": "03:30 HAN",
+        "arrives": "10:20",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 471,
+        "airline": "Korean Air",
+        "stops": 2,
+        "layovers": [
+          "ICN",
+          "FRA"
+        ],
+        "duration": "24h 10m",
+        "departs": "09:30 HAN",
+        "arrives": "11:40 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 502,
+        "airline": "KLM",
+        "stops": 0,
+        "layovers": [],
+        "duration": "11h 50m",
+        "departs": "23:55 HAN",
+        "arrives": "11:45 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 529,
+        "airline": "EVA Air",
+        "stops": 2,
+        "layovers": [
+          "TPE",
+          "FRA"
+        ],
+        "duration": "23h 05m",
+        "departs": "16:20 HAN",
+        "arrives": "16:25 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 550,
+        "airline": "Vietnam Airlines + KLM",
+        "stops": 1,
+        "layovers": [
+          "CDG"
+        ],
+        "duration": "20h 10m",
+        "departs": "23:50 HAN",
+        "arrives": "17:00 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      }
+    ],
+    "2026-08-20_BRU": [
+      {
+        "price_eur": 368,
+        "airline": "China Southern",
+        "stops": 2,
+        "layovers": [
+          "CAN",
+          "FRA"
+        ],
+        "duration": "22h 15m",
+        "departs": "08:05 HAN",
+        "arrives": "14:20 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 396,
+        "airline": "Air China",
+        "stops": 2,
+        "layovers": [
+          "PEK",
+          "FRA"
+        ],
+        "duration": "21h 55m",
+        "departs": "07:00 HAN",
+        "arrives": "05:55 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 422,
+        "airline": "China Eastern",
+        "stops": 2,
+        "layovers": [
+          "PVG",
+          "FRA"
+        ],
+        "duration": "21h 40m",
+        "departs": "09:10 HAN",
+        "arrives": "07:50 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 446,
+        "airline": "Cathay Pacific",
+        "stops": 1,
+        "layovers": [
+          "HKG"
+        ],
+        "duration": "17h 40m",
+        "departs": "17:15 HAN",
+        "arrives": "11:55 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 457,
+        "airline": "Singapore Airlines",
+        "stops": 1,
+        "layovers": [
+          "SIN"
+        ],
+        "duration": "18h 55m",
+        "departs": "00:40 HAN",
+        "arrives": "07:35 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 471,
+        "airline": "Turkish Airlines",
+        "stops": 1,
+        "layovers": [
+          "IST"
+        ],
+        "duration": "16h 50m",
+        "departs": "03:30 HAN",
+        "arrives": "10:20",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 486,
+        "airline": "Korean Air",
+        "stops": 2,
+        "layovers": [
+          "ICN",
+          "FRA"
+        ],
+        "duration": "24h 10m",
+        "departs": "09:30 HAN",
+        "arrives": "11:40 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 518,
+        "airline": "KLM",
+        "stops": 0,
+        "layovers": [],
+        "duration": "11h 50m",
+        "departs": "23:55 HAN",
+        "arrives": "11:45 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 546,
+        "airline": "EVA Air",
+        "stops": 2,
+        "layovers": [
+          "TPE",
+          "FRA"
+        ],
+        "duration": "23h 05m",
+        "departs": "16:20 HAN",
+        "arrives": "16:25 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 568,
+        "airline": "Vietnam Airlines + KLM",
+        "stops": 1,
+        "layovers": [
+          "CDG"
+        ],
+        "duration": "20h 10m",
+        "departs": "23:50 HAN",
+        "arrives": "17:00 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      }
+    ],
+    "2026-08-21_AMS": [
+      {
+        "price_eur": 340,
+        "airline": "China Southern",
+        "stops": 2,
+        "layovers": [
+          "CAN",
+          "FRA"
+        ],
+        "duration": "22h 15m",
+        "departs": "08:05 HAN",
+        "arrives": "14:20 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 366,
+        "airline": "Air China",
+        "stops": 2,
+        "layovers": [
+          "PEK",
+          "FRA"
+        ],
+        "duration": "21h 55m",
+        "departs": "07:00 HAN",
+        "arrives": "05:55 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 390,
+        "airline": "China Eastern",
+        "stops": 2,
+        "layovers": [
+          "PVG",
+          "FRA"
+        ],
+        "duration": "21h 40m",
+        "departs": "09:10 HAN",
+        "arrives": "07:50 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 412,
+        "airline": "Cathay Pacific",
+        "stops": 1,
+        "layovers": [
+          "HKG"
+        ],
+        "duration": "17h 40m",
+        "departs": "17:15 HAN",
+        "arrives": "11:55 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 422,
+        "airline": "Singapore Airlines",
+        "stops": 1,
+        "layovers": [
+          "SIN"
+        ],
+        "duration": "18h 55m",
+        "departs": "00:40 HAN",
+        "arrives": "07:35 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 435,
+        "airline": "Turkish Airlines",
+        "stops": 1,
+        "layovers": [
+          "IST"
+        ],
+        "duration": "16h 50m",
+        "departs": "03:30 HAN",
+        "arrives": "10:20",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 449,
+        "airline": "Korean Air",
+        "stops": 2,
+        "layovers": [
+          "ICN",
+          "FRA"
+        ],
+        "duration": "24h 10m",
+        "departs": "09:30 HAN",
+        "arrives": "11:40 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 478,
+        "airline": "KLM",
+        "stops": 0,
+        "layovers": [],
+        "duration": "11h 50m",
+        "departs": "23:55 HAN",
+        "arrives": "11:45 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 505,
+        "airline": "EVA Air",
+        "stops": 2,
+        "layovers": [
+          "TPE",
+          "FRA"
+        ],
+        "duration": "23h 05m",
+        "departs": "16:20 HAN",
+        "arrives": "16:25 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 525,
+        "airline": "Vietnam Airlines + KLM",
+        "stops": 1,
+        "layovers": [
+          "CDG"
+        ],
+        "duration": "20h 10m",
+        "departs": "23:50 HAN",
+        "arrives": "17:00 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      }
+    ],
+    "2026-08-21_DUS": [
+      {
+        "price_eur": 316,
+        "airline": "China Southern",
+        "stops": 2,
+        "layovers": [
+          "CAN",
+          "FRA"
+        ],
+        "duration": "22h 15m",
+        "departs": "08:05 HAN",
+        "arrives": "14:20 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 340,
+        "airline": "Air China",
+        "stops": 2,
+        "layovers": [
+          "PEK",
+          "FRA"
+        ],
+        "duration": "21h 55m",
+        "departs": "07:00 HAN",
+        "arrives": "05:55 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 363,
+        "airline": "China Eastern",
+        "stops": 2,
+        "layovers": [
+          "PVG",
+          "FRA"
+        ],
+        "duration": "21h 40m",
+        "departs": "09:10 HAN",
+        "arrives": "07:50 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 383,
+        "airline": "Cathay Pacific",
+        "stops": 1,
+        "layovers": [
+          "HKG"
+        ],
+        "duration": "17h 40m",
+        "departs": "17:15 HAN",
+        "arrives": "11:55 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 393,
+        "airline": "Singapore Airlines",
+        "stops": 1,
+        "layovers": [
+          "SIN"
+        ],
+        "duration": "18h 55m",
+        "departs": "00:40 HAN",
+        "arrives": "07:35 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 405,
+        "airline": "Turkish Airlines",
+        "stops": 1,
+        "layovers": [
+          "IST"
+        ],
+        "duration": "16h 50m",
+        "departs": "03:30 HAN",
+        "arrives": "10:20",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 418,
+        "airline": "Korean Air",
+        "stops": 2,
+        "layovers": [
+          "ICN",
+          "FRA"
+        ],
+        "duration": "24h 10m",
+        "departs": "09:30 HAN",
+        "arrives": "11:40 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 445,
+        "airline": "KLM",
+        "stops": 0,
+        "layovers": [],
+        "duration": "11h 50m",
+        "departs": "23:55 HAN",
+        "arrives": "11:45 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 469,
+        "airline": "EVA Air",
+        "stops": 2,
+        "layovers": [
+          "TPE",
+          "FRA"
+        ],
+        "duration": "23h 05m",
+        "departs": "16:20 HAN",
+        "arrives": "16:25 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 488,
+        "airline": "Vietnam Airlines + KLM",
+        "stops": 1,
+        "layovers": [
+          "CDG"
+        ],
+        "duration": "20h 10m",
+        "departs": "23:50 HAN",
+        "arrives": "17:00 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      }
+    ],
+    "2026-08-21_BRU": [
+      {
+        "price_eur": 327,
+        "airline": "China Southern",
+        "stops": 2,
+        "layovers": [
+          "CAN",
+          "FRA"
+        ],
+        "duration": "22h 15m",
+        "departs": "08:05 HAN",
+        "arrives": "14:20 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 351,
+        "airline": "Air China",
+        "stops": 2,
+        "layovers": [
+          "PEK",
+          "FRA"
+        ],
+        "duration": "21h 55m",
+        "departs": "07:00 HAN",
+        "arrives": "05:55 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 374,
+        "airline": "China Eastern",
+        "stops": 2,
+        "layovers": [
+          "PVG",
+          "FRA"
+        ],
+        "duration": "21h 40m",
+        "departs": "09:10 HAN",
+        "arrives": "07:50 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 395,
+        "airline": "Cathay Pacific",
+        "stops": 1,
+        "layovers": [
+          "HKG"
+        ],
+        "duration": "17h 40m",
+        "departs": "17:15 HAN",
+        "arrives": "11:55 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 405,
+        "airline": "Singapore Airlines",
+        "stops": 1,
+        "layovers": [
+          "SIN"
+        ],
+        "duration": "18h 55m",
+        "departs": "00:40 HAN",
+        "arrives": "07:35 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 418,
+        "airline": "Turkish Airlines",
+        "stops": 1,
+        "layovers": [
+          "IST"
+        ],
+        "duration": "16h 50m",
+        "departs": "03:30 HAN",
+        "arrives": "10:20",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 431,
+        "airline": "Korean Air",
+        "stops": 2,
+        "layovers": [
+          "ICN",
+          "FRA"
+        ],
+        "duration": "24h 10m",
+        "departs": "09:30 HAN",
+        "arrives": "11:40 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 459,
+        "airline": "KLM",
+        "stops": 0,
+        "layovers": [],
+        "duration": "11h 50m",
+        "departs": "23:55 HAN",
+        "arrives": "11:45 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 485,
+        "airline": "EVA Air",
+        "stops": 2,
+        "layovers": [
+          "TPE",
+          "FRA"
+        ],
+        "duration": "23h 05m",
+        "departs": "16:20 HAN",
+        "arrives": "16:25 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 504,
+        "airline": "Vietnam Airlines + KLM",
+        "stops": 1,
+        "layovers": [
+          "CDG"
+        ],
+        "duration": "20h 10m",
+        "departs": "23:50 HAN",
+        "arrives": "17:00 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      }
+    ],
+    "2026-08-22_AMS": [
+      {
+        "price_eur": 348,
+        "airline": "China Southern",
+        "stops": 2,
+        "layovers": [
+          "CAN",
+          "FRA"
+        ],
+        "duration": "22h 15m",
+        "departs": "08:05 HAN",
+        "arrives": "14:20 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 373,
+        "airline": "Air China",
+        "stops": 2,
+        "layovers": [
+          "PEK",
+          "FRA"
+        ],
+        "duration": "21h 55m",
+        "departs": "07:00 HAN",
+        "arrives": "05:55 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 398,
+        "airline": "China Eastern",
+        "stops": 2,
+        "layovers": [
+          "PVG",
+          "FRA"
+        ],
+        "duration": "21h 40m",
+        "departs": "09:10 HAN",
+        "arrives": "07:50 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 420,
+        "airline": "Cathay Pacific",
+        "stops": 1,
+        "layovers": [
+          "HKG"
+        ],
+        "duration": "17h 40m",
+        "departs": "17:15 HAN",
+        "arrives": "11:55 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 431,
+        "airline": "Singapore Airlines",
+        "stops": 1,
+        "layovers": [
+          "SIN"
+        ],
+        "duration": "18h 55m",
+        "departs": "00:40 HAN",
+        "arrives": "07:35 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 444,
+        "airline": "Turkish Airlines",
+        "stops": 1,
+        "layovers": [
+          "IST"
+        ],
+        "duration": "16h 50m",
+        "departs": "03:30 HAN",
+        "arrives": "10:20",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 459,
+        "airline": "Korean Air",
+        "stops": 2,
+        "layovers": [
+          "ICN",
+          "FRA"
+        ],
+        "duration": "24h 10m",
+        "departs": "09:30 HAN",
+        "arrives": "11:40 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 489,
+        "airline": "KLM",
+        "stops": 0,
+        "layovers": [],
+        "duration": "11h 50m",
+        "departs": "23:55 HAN",
+        "arrives": "11:45 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 516,
+        "airline": "EVA Air",
+        "stops": 2,
+        "layovers": [
+          "TPE",
+          "FRA"
+        ],
+        "duration": "23h 05m",
+        "departs": "16:20 HAN",
+        "arrives": "16:25 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 536,
+        "airline": "Vietnam Airlines + KLM",
+        "stops": 1,
+        "layovers": [
+          "CDG"
+        ],
+        "duration": "20h 10m",
+        "departs": "23:50 HAN",
+        "arrives": "17:00 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      }
+    ],
+    "2026-08-22_DUS": [
+      {
+        "price_eur": 323,
+        "airline": "China Southern",
+        "stops": 2,
+        "layovers": [
+          "CAN",
+          "FRA"
+        ],
+        "duration": "22h 15m",
+        "departs": "08:05 HAN",
+        "arrives": "14:20 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 347,
+        "airline": "Air China",
+        "stops": 2,
+        "layovers": [
+          "PEK",
+          "FRA"
+        ],
+        "duration": "21h 55m",
+        "departs": "07:00 HAN",
+        "arrives": "05:55 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 371,
+        "airline": "China Eastern",
+        "stops": 2,
+        "layovers": [
+          "PVG",
+          "FRA"
+        ],
+        "duration": "21h 40m",
+        "departs": "09:10 HAN",
+        "arrives": "07:50 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 391,
+        "airline": "Cathay Pacific",
+        "stops": 1,
+        "layovers": [
+          "HKG"
+        ],
+        "duration": "17h 40m",
+        "departs": "17:15 HAN",
+        "arrives": "11:55 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 401,
+        "airline": "Singapore Airlines",
+        "stops": 1,
+        "layovers": [
+          "SIN"
+        ],
+        "duration": "18h 55m",
+        "departs": "00:40 HAN",
+        "arrives": "07:35 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 413,
+        "airline": "Turkish Airlines",
+        "stops": 1,
+        "layovers": [
+          "IST"
+        ],
+        "duration": "16h 50m",
+        "departs": "03:30 HAN",
+        "arrives": "10:20",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 427,
+        "airline": "Korean Air",
+        "stops": 2,
+        "layovers": [
+          "ICN",
+          "FRA"
+        ],
+        "duration": "24h 10m",
+        "departs": "09:30 HAN",
+        "arrives": "11:40 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 454,
+        "airline": "KLM",
+        "stops": 0,
+        "layovers": [],
+        "duration": "11h 50m",
+        "departs": "23:55 HAN",
+        "arrives": "11:45 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 479,
+        "airline": "EVA Air",
+        "stops": 2,
+        "layovers": [
+          "TPE",
+          "FRA"
+        ],
+        "duration": "23h 05m",
+        "departs": "16:20 HAN",
+        "arrives": "16:25 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 498,
+        "airline": "Vietnam Airlines + KLM",
+        "stops": 1,
+        "layovers": [
+          "CDG"
+        ],
+        "duration": "20h 10m",
+        "departs": "23:50 HAN",
+        "arrives": "17:00 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      }
+    ],
+    "2026-08-22_BRU": [
+      {
+        "price_eur": 334,
+        "airline": "China Southern",
+        "stops": 2,
+        "layovers": [
+          "CAN",
+          "FRA"
+        ],
+        "duration": "22h 15m",
+        "departs": "08:05 HAN",
+        "arrives": "14:20 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 359,
+        "airline": "Air China",
+        "stops": 2,
+        "layovers": [
+          "PEK",
+          "FRA"
+        ],
+        "duration": "21h 55m",
+        "departs": "07:00 HAN",
+        "arrives": "05:55 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 382,
+        "airline": "China Eastern",
+        "stops": 2,
+        "layovers": [
+          "PVG",
+          "FRA"
+        ],
+        "duration": "21h 40m",
+        "departs": "09:10 HAN",
+        "arrives": "07:50 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 404,
+        "airline": "Cathay Pacific",
+        "stops": 1,
+        "layovers": [
+          "HKG"
+        ],
+        "duration": "17h 40m",
+        "departs": "17:15 HAN",
+        "arrives": "11:55 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 414,
+        "airline": "Singapore Airlines",
+        "stops": 1,
+        "layovers": [
+          "SIN"
+        ],
+        "duration": "18h 55m",
+        "departs": "00:40 HAN",
+        "arrives": "07:35 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 427,
+        "airline": "Turkish Airlines",
+        "stops": 1,
+        "layovers": [
+          "IST"
+        ],
+        "duration": "16h 50m",
+        "departs": "03:30 HAN",
+        "arrives": "10:20",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 441,
+        "airline": "Korean Air",
+        "stops": 2,
+        "layovers": [
+          "ICN",
+          "FRA"
+        ],
+        "duration": "24h 10m",
+        "departs": "09:30 HAN",
+        "arrives": "11:40 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 469,
+        "airline": "KLM",
+        "stops": 0,
+        "layovers": [],
+        "duration": "11h 50m",
+        "departs": "23:55 HAN",
+        "arrives": "11:45 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 495,
+        "airline": "EVA Air",
+        "stops": 2,
+        "layovers": [
+          "TPE",
+          "FRA"
+        ],
+        "duration": "23h 05m",
+        "departs": "16:20 HAN",
+        "arrives": "16:25 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 514,
+        "airline": "Vietnam Airlines + KLM",
+        "stops": 1,
+        "layovers": [
+          "CDG"
+        ],
+        "duration": "20h 10m",
+        "departs": "23:50 HAN",
+        "arrives": "17:00 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      }
+    ],
+    "2026-08-23_AMS": [
+      {
+        "price_eur": 355,
+        "airline": "China Southern",
+        "stops": 2,
+        "layovers": [
+          "CAN",
+          "FRA"
+        ],
+        "duration": "22h 15m",
+        "departs": "08:05 HAN",
+        "arrives": "14:20 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 381,
+        "airline": "Air China",
+        "stops": 2,
+        "layovers": [
+          "PEK",
+          "FRA"
+        ],
+        "duration": "21h 55m",
+        "departs": "07:00 HAN",
+        "arrives": "05:55 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 407,
+        "airline": "China Eastern",
+        "stops": 2,
+        "layovers": [
+          "PVG",
+          "FRA"
+        ],
+        "duration": "21h 40m",
+        "departs": "09:10 HAN",
+        "arrives": "07:50 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 429,
+        "airline": "Cathay Pacific",
+        "stops": 1,
+        "layovers": [
+          "HKG"
+        ],
+        "duration": "17h 40m",
+        "departs": "17:15 HAN",
+        "arrives": "11:55 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 440,
+        "airline": "Singapore Airlines",
+        "stops": 1,
+        "layovers": [
+          "SIN"
+        ],
+        "duration": "18h 55m",
+        "departs": "00:40 HAN",
+        "arrives": "07:35 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 454,
+        "airline": "Turkish Airlines",
+        "stops": 1,
+        "layovers": [
+          "IST"
+        ],
+        "duration": "16h 50m",
+        "departs": "03:30 HAN",
+        "arrives": "10:20",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 468,
+        "airline": "Korean Air",
+        "stops": 2,
+        "layovers": [
+          "ICN",
+          "FRA"
+        ],
+        "duration": "24h 10m",
+        "departs": "09:30 HAN",
+        "arrives": "11:40 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 499,
+        "airline": "KLM",
+        "stops": 0,
+        "layovers": [],
+        "duration": "11h 50m",
+        "departs": "23:55 HAN",
+        "arrives": "11:45 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 526,
+        "airline": "EVA Air",
+        "stops": 2,
+        "layovers": [
+          "TPE",
+          "FRA"
+        ],
+        "duration": "23h 05m",
+        "departs": "16:20 HAN",
+        "arrives": "16:25 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 547,
+        "airline": "Vietnam Airlines + KLM",
+        "stops": 1,
+        "layovers": [
+          "CDG"
+        ],
+        "duration": "20h 10m",
+        "departs": "23:50 HAN",
+        "arrives": "17:00 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      }
+    ],
+    "2026-08-23_DUS": [
+      {
+        "price_eur": 330,
+        "airline": "China Southern",
+        "stops": 2,
+        "layovers": [
+          "CAN",
+          "FRA"
+        ],
+        "duration": "22h 15m",
+        "departs": "08:05 HAN",
+        "arrives": "14:20 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 355,
+        "airline": "Air China",
+        "stops": 2,
+        "layovers": [
+          "PEK",
+          "FRA"
+        ],
+        "duration": "21h 55m",
+        "departs": "07:00 HAN",
+        "arrives": "05:55 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 378,
+        "airline": "China Eastern",
+        "stops": 2,
+        "layovers": [
+          "PVG",
+          "FRA"
+        ],
+        "duration": "21h 40m",
+        "departs": "09:10 HAN",
+        "arrives": "07:50 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 399,
+        "airline": "Cathay Pacific",
+        "stops": 1,
+        "layovers": [
+          "HKG"
+        ],
+        "duration": "17h 40m",
+        "departs": "17:15 HAN",
+        "arrives": "11:55 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 409,
+        "airline": "Singapore Airlines",
+        "stops": 1,
+        "layovers": [
+          "SIN"
+        ],
+        "duration": "18h 55m",
+        "departs": "00:40 HAN",
+        "arrives": "07:35 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 422,
+        "airline": "Turkish Airlines",
+        "stops": 1,
+        "layovers": [
+          "IST"
+        ],
+        "duration": "16h 50m",
+        "departs": "03:30 HAN",
+        "arrives": "10:20",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 436,
+        "airline": "Korean Air",
+        "stops": 2,
+        "layovers": [
+          "ICN",
+          "FRA"
+        ],
+        "duration": "24h 10m",
+        "departs": "09:30 HAN",
+        "arrives": "11:40 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 464,
+        "airline": "KLM",
+        "stops": 0,
+        "layovers": [],
+        "duration": "11h 50m",
+        "departs": "23:55 HAN",
+        "arrives": "11:45 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 489,
+        "airline": "EVA Air",
+        "stops": 2,
+        "layovers": [
+          "TPE",
+          "FRA"
+        ],
+        "duration": "23h 05m",
+        "departs": "16:20 HAN",
+        "arrives": "16:25 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 509,
+        "airline": "Vietnam Airlines + KLM",
+        "stops": 1,
+        "layovers": [
+          "CDG"
+        ],
+        "duration": "20h 10m",
+        "departs": "23:50 HAN",
+        "arrives": "17:00 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      }
+    ],
+    "2026-08-23_BRU": [
+      {
+        "price_eur": 341,
+        "airline": "China Southern",
+        "stops": 2,
+        "layovers": [
+          "CAN",
+          "FRA"
+        ],
+        "duration": "22h 15m",
+        "departs": "08:05 HAN",
+        "arrives": "14:20 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 366,
+        "airline": "Air China",
+        "stops": 2,
+        "layovers": [
+          "PEK",
+          "FRA"
+        ],
+        "duration": "21h 55m",
+        "departs": "07:00 HAN",
+        "arrives": "05:55 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 390,
+        "airline": "China Eastern",
+        "stops": 2,
+        "layovers": [
+          "PVG",
+          "FRA"
+        ],
+        "duration": "21h 40m",
+        "departs": "09:10 HAN",
+        "arrives": "07:50 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 412,
+        "airline": "Cathay Pacific",
+        "stops": 1,
+        "layovers": [
+          "HKG"
+        ],
+        "duration": "17h 40m",
+        "departs": "17:15 HAN",
+        "arrives": "11:55 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 422,
+        "airline": "Singapore Airlines",
+        "stops": 1,
+        "layovers": [
+          "SIN"
+        ],
+        "duration": "18h 55m",
+        "departs": "00:40 HAN",
+        "arrives": "07:35 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 436,
+        "airline": "Turkish Airlines",
+        "stops": 1,
+        "layovers": [
+          "IST"
+        ],
+        "duration": "16h 50m",
+        "departs": "03:30 HAN",
+        "arrives": "10:20",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 450,
+        "airline": "Korean Air",
+        "stops": 2,
+        "layovers": [
+          "ICN",
+          "FRA"
+        ],
+        "duration": "24h 10m",
+        "departs": "09:30 HAN",
+        "arrives": "11:40 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 479,
+        "airline": "KLM",
+        "stops": 0,
+        "layovers": [],
+        "duration": "11h 50m",
+        "departs": "23:55 HAN",
+        "arrives": "11:45 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 505,
+        "airline": "EVA Air",
+        "stops": 2,
+        "layovers": [
+          "TPE",
+          "FRA"
+        ],
+        "duration": "23h 05m",
+        "departs": "16:20 HAN",
+        "arrives": "16:25 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 525,
+        "airline": "Vietnam Airlines + KLM",
+        "stops": 1,
+        "layovers": [
+          "CDG"
+        ],
+        "duration": "20h 10m",
+        "departs": "23:50 HAN",
+        "arrives": "17:00 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      }
+    ],
+    "2026-08-24_AMS": [
+      {
+        "price_eur": 362,
+        "airline": "China Southern",
+        "stops": 2,
+        "layovers": [
+          "CAN",
+          "FRA"
+        ],
+        "duration": "22h 15m",
+        "departs": "08:05 HAN",
+        "arrives": "14:20 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 389,
+        "airline": "Air China",
+        "stops": 2,
+        "layovers": [
+          "PEK",
+          "FRA"
+        ],
+        "duration": "21h 55m",
+        "departs": "07:00 HAN",
+        "arrives": "05:55 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 415,
+        "airline": "China Eastern",
+        "stops": 2,
+        "layovers": [
+          "PVG",
+          "FRA"
+        ],
+        "duration": "21h 40m",
+        "departs": "09:10 HAN",
+        "arrives": "07:50 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 438,
+        "airline": "Cathay Pacific",
+        "stops": 1,
+        "layovers": [
+          "HKG"
+        ],
+        "duration": "17h 40m",
+        "departs": "17:15 HAN",
+        "arrives": "11:55 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 449,
+        "airline": "Singapore Airlines",
+        "stops": 1,
+        "layovers": [
+          "SIN"
+        ],
+        "duration": "18h 55m",
+        "departs": "00:40 HAN",
+        "arrives": "07:35 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 463,
+        "airline": "Turkish Airlines",
+        "stops": 1,
+        "layovers": [
+          "IST"
+        ],
+        "duration": "16h 50m",
+        "departs": "03:30 HAN",
+        "arrives": "10:20",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 478,
+        "airline": "Korean Air",
+        "stops": 2,
+        "layovers": [
+          "ICN",
+          "FRA"
+        ],
+        "duration": "24h 10m",
+        "departs": "09:30 HAN",
+        "arrives": "11:40 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 509,
+        "airline": "KLM",
+        "stops": 0,
+        "layovers": [],
+        "duration": "11h 50m",
+        "departs": "23:55 HAN",
+        "arrives": "11:45 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 537,
+        "airline": "EVA Air",
+        "stops": 2,
+        "layovers": [
+          "TPE",
+          "FRA"
+        ],
+        "duration": "23h 05m",
+        "departs": "16:20 HAN",
+        "arrives": "16:25 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 558,
+        "airline": "Vietnam Airlines + KLM",
+        "stops": 1,
+        "layovers": [
+          "CDG"
+        ],
+        "duration": "20h 10m",
+        "departs": "23:50 HAN",
+        "arrives": "17:00 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      }
+    ],
+    "2026-08-24_DUS": [
+      {
+        "price_eur": 337,
+        "airline": "China Southern",
+        "stops": 2,
+        "layovers": [
+          "CAN",
+          "FRA"
+        ],
+        "duration": "22h 15m",
+        "departs": "08:05 HAN",
+        "arrives": "14:20 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 362,
+        "airline": "Air China",
+        "stops": 2,
+        "layovers": [
+          "PEK",
+          "FRA"
+        ],
+        "duration": "21h 55m",
+        "departs": "07:00 HAN",
+        "arrives": "05:55 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 386,
+        "airline": "China Eastern",
+        "stops": 2,
+        "layovers": [
+          "PVG",
+          "FRA"
+        ],
+        "duration": "21h 40m",
+        "departs": "09:10 HAN",
+        "arrives": "07:50 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 407,
+        "airline": "Cathay Pacific",
+        "stops": 1,
+        "layovers": [
+          "HKG"
+        ],
+        "duration": "17h 40m",
+        "departs": "17:15 HAN",
+        "arrives": "11:55 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 418,
+        "airline": "Singapore Airlines",
+        "stops": 1,
+        "layovers": [
+          "SIN"
+        ],
+        "duration": "18h 55m",
+        "departs": "00:40 HAN",
+        "arrives": "07:35 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 431,
+        "airline": "Turkish Airlines",
+        "stops": 1,
+        "layovers": [
+          "IST"
+        ],
+        "duration": "16h 50m",
+        "departs": "03:30 HAN",
+        "arrives": "10:20",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 445,
+        "airline": "Korean Air",
+        "stops": 2,
+        "layovers": [
+          "ICN",
+          "FRA"
+        ],
+        "duration": "24h 10m",
+        "departs": "09:30 HAN",
+        "arrives": "11:40 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 473,
+        "airline": "KLM",
+        "stops": 0,
+        "layovers": [],
+        "duration": "11h 50m",
+        "departs": "23:55 HAN",
+        "arrives": "11:45 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 499,
+        "airline": "EVA Air",
+        "stops": 2,
+        "layovers": [
+          "TPE",
+          "FRA"
+        ],
+        "duration": "23h 05m",
+        "departs": "16:20 HAN",
+        "arrives": "16:25 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 519,
+        "airline": "Vietnam Airlines + KLM",
+        "stops": 1,
+        "layovers": [
+          "CDG"
+        ],
+        "duration": "20h 10m",
+        "departs": "23:50 HAN",
+        "arrives": "17:00 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      }
+    ],
+    "2026-08-24_BRU": [
+      {
+        "price_eur": 348,
+        "airline": "China Southern",
+        "stops": 2,
+        "layovers": [
+          "CAN",
+          "FRA"
+        ],
+        "duration": "22h 15m",
+        "departs": "08:05 HAN",
+        "arrives": "14:20 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 373,
+        "airline": "Air China",
+        "stops": 2,
+        "layovers": [
+          "PEK",
+          "FRA"
+        ],
+        "duration": "21h 55m",
+        "departs": "07:00 HAN",
+        "arrives": "05:55 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 398,
+        "airline": "China Eastern",
+        "stops": 2,
+        "layovers": [
+          "PVG",
+          "FRA"
+        ],
+        "duration": "21h 40m",
+        "departs": "09:10 HAN",
+        "arrives": "07:50 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 420,
+        "airline": "Cathay Pacific",
+        "stops": 1,
+        "layovers": [
+          "HKG"
+        ],
+        "duration": "17h 40m",
+        "departs": "17:15 HAN",
+        "arrives": "11:55 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 431,
+        "airline": "Singapore Airlines",
+        "stops": 1,
+        "layovers": [
+          "SIN"
+        ],
+        "duration": "18h 55m",
+        "departs": "00:40 HAN",
+        "arrives": "07:35 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 444,
+        "airline": "Turkish Airlines",
+        "stops": 1,
+        "layovers": [
+          "IST"
+        ],
+        "duration": "16h 50m",
+        "departs": "03:30 HAN",
+        "arrives": "10:20",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 459,
+        "airline": "Korean Air",
+        "stops": 2,
+        "layovers": [
+          "ICN",
+          "FRA"
+        ],
+        "duration": "24h 10m",
+        "departs": "09:30 HAN",
+        "arrives": "11:40 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 489,
+        "airline": "KLM",
+        "stops": 0,
+        "layovers": [],
+        "duration": "11h 50m",
+        "departs": "23:55 HAN",
+        "arrives": "11:45 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 516,
+        "airline": "EVA Air",
+        "stops": 2,
+        "layovers": [
+          "TPE",
+          "FRA"
+        ],
+        "duration": "23h 05m",
+        "departs": "16:20 HAN",
+        "arrives": "16:25 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 536,
+        "airline": "Vietnam Airlines + KLM",
+        "stops": 1,
+        "layovers": [
+          "CDG"
+        ],
+        "duration": "20h 10m",
+        "departs": "23:50 HAN",
+        "arrives": "17:00 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      }
+    ],
+    "2026-08-25_AMS": [
+      {
+        "price_eur": 369,
+        "airline": "China Southern",
+        "stops": 2,
+        "layovers": [
+          "CAN",
+          "FRA"
+        ],
+        "duration": "22h 15m",
+        "departs": "08:05 HAN",
+        "arrives": "14:20 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 397,
+        "airline": "Air China",
+        "stops": 2,
+        "layovers": [
+          "PEK",
+          "FRA"
+        ],
+        "duration": "21h 55m",
+        "departs": "07:00 HAN",
+        "arrives": "05:55 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 423,
+        "airline": "China Eastern",
+        "stops": 2,
+        "layovers": [
+          "PVG",
+          "FRA"
+        ],
+        "duration": "21h 40m",
+        "departs": "09:10 HAN",
+        "arrives": "07:50 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 447,
+        "airline": "Cathay Pacific",
+        "stops": 1,
+        "layovers": [
+          "HKG"
+        ],
+        "duration": "17h 40m",
+        "departs": "17:15 HAN",
+        "arrives": "11:55 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 458,
+        "airline": "Singapore Airlines",
+        "stops": 1,
+        "layovers": [
+          "SIN"
+        ],
+        "duration": "18h 55m",
+        "departs": "00:40 HAN",
+        "arrives": "07:35 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 472,
+        "airline": "Turkish Airlines",
+        "stops": 1,
+        "layovers": [
+          "IST"
+        ],
+        "duration": "16h 50m",
+        "departs": "03:30 HAN",
+        "arrives": "10:20",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 488,
+        "airline": "Korean Air",
+        "stops": 2,
+        "layovers": [
+          "ICN",
+          "FRA"
+        ],
+        "duration": "24h 10m",
+        "departs": "09:30 HAN",
+        "arrives": "11:40 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 519,
+        "airline": "KLM",
+        "stops": 0,
+        "layovers": [],
+        "duration": "11h 50m",
+        "departs": "23:55 HAN",
+        "arrives": "11:45 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 548,
+        "airline": "EVA Air",
+        "stops": 2,
+        "layovers": [
+          "TPE",
+          "FRA"
+        ],
+        "duration": "23h 05m",
+        "departs": "16:20 HAN",
+        "arrives": "16:25 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 569,
+        "airline": "Vietnam Airlines + KLM",
+        "stops": 1,
+        "layovers": [
+          "CDG"
+        ],
+        "duration": "20h 10m",
+        "departs": "23:50 HAN",
+        "arrives": "17:00 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      }
+    ],
+    "2026-08-25_DUS": [
+      {
+        "price_eur": 343,
+        "airline": "China Southern",
+        "stops": 2,
+        "layovers": [
+          "CAN",
+          "FRA"
+        ],
+        "duration": "22h 15m",
+        "departs": "08:05 HAN",
+        "arrives": "14:20 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 369,
+        "airline": "Air China",
+        "stops": 2,
+        "layovers": [
+          "PEK",
+          "FRA"
+        ],
+        "duration": "21h 55m",
+        "departs": "07:00 HAN",
+        "arrives": "05:55 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 394,
+        "airline": "China Eastern",
+        "stops": 2,
+        "layovers": [
+          "PVG",
+          "FRA"
+        ],
+        "duration": "21h 40m",
+        "departs": "09:10 HAN",
+        "arrives": "07:50 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 415,
+        "airline": "Cathay Pacific",
+        "stops": 1,
+        "layovers": [
+          "HKG"
+        ],
+        "duration": "17h 40m",
+        "departs": "17:15 HAN",
+        "arrives": "11:55 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 426,
+        "airline": "Singapore Airlines",
+        "stops": 1,
+        "layovers": [
+          "SIN"
+        ],
+        "duration": "18h 55m",
+        "departs": "00:40 HAN",
+        "arrives": "07:35 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 439,
+        "airline": "Turkish Airlines",
+        "stops": 1,
+        "layovers": [
+          "IST"
+        ],
+        "duration": "16h 50m",
+        "departs": "03:30 HAN",
+        "arrives": "10:20",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 453,
+        "airline": "Korean Air",
+        "stops": 2,
+        "layovers": [
+          "ICN",
+          "FRA"
+        ],
+        "duration": "24h 10m",
+        "departs": "09:30 HAN",
+        "arrives": "11:40 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 483,
+        "airline": "KLM",
+        "stops": 0,
+        "layovers": [],
+        "duration": "11h 50m",
+        "departs": "23:55 HAN",
+        "arrives": "11:45 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 509,
+        "airline": "EVA Air",
+        "stops": 2,
+        "layovers": [
+          "TPE",
+          "FRA"
+        ],
+        "duration": "23h 05m",
+        "departs": "16:20 HAN",
+        "arrives": "16:25 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 529,
+        "airline": "Vietnam Airlines + KLM",
+        "stops": 1,
+        "layovers": [
+          "CDG"
+        ],
+        "duration": "20h 10m",
+        "departs": "23:50 HAN",
+        "arrives": "17:00 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      }
+    ],
+    "2026-08-25_BRU": [
+      {
+        "price_eur": 354,
+        "airline": "China Southern",
+        "stops": 2,
+        "layovers": [
+          "CAN",
+          "FRA"
+        ],
+        "duration": "22h 15m",
+        "departs": "08:05 HAN",
+        "arrives": "14:20 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 381,
+        "airline": "Air China",
+        "stops": 2,
+        "layovers": [
+          "PEK",
+          "FRA"
+        ],
+        "duration": "21h 55m",
+        "departs": "07:00 HAN",
+        "arrives": "05:55 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 406,
+        "airline": "China Eastern",
+        "stops": 2,
+        "layovers": [
+          "PVG",
+          "FRA"
+        ],
+        "duration": "21h 40m",
+        "departs": "09:10 HAN",
+        "arrives": "07:50 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 429,
+        "airline": "Cathay Pacific",
+        "stops": 1,
+        "layovers": [
+          "HKG"
+        ],
+        "duration": "17h 40m",
+        "departs": "17:15 HAN",
+        "arrives": "11:55 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 440,
+        "airline": "Singapore Airlines",
+        "stops": 1,
+        "layovers": [
+          "SIN"
+        ],
+        "duration": "18h 55m",
+        "departs": "00:40 HAN",
+        "arrives": "07:35 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 453,
+        "airline": "Turkish Airlines",
+        "stops": 1,
+        "layovers": [
+          "IST"
+        ],
+        "duration": "16h 50m",
+        "departs": "03:30 HAN",
+        "arrives": "10:20",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 468,
+        "airline": "Korean Air",
+        "stops": 2,
+        "layovers": [
+          "ICN",
+          "FRA"
+        ],
+        "duration": "24h 10m",
+        "departs": "09:30 HAN",
+        "arrives": "11:40 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 498,
+        "airline": "KLM",
+        "stops": 0,
+        "layovers": [],
+        "duration": "11h 50m",
+        "departs": "23:55 HAN",
+        "arrives": "11:45 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 526,
+        "airline": "EVA Air",
+        "stops": 2,
+        "layovers": [
+          "TPE",
+          "FRA"
+        ],
+        "duration": "23h 05m",
+        "departs": "16:20 HAN",
+        "arrives": "16:25 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 546,
+        "airline": "Vietnam Airlines + KLM",
+        "stops": 1,
+        "layovers": [
+          "CDG"
+        ],
+        "duration": "20h 10m",
+        "departs": "23:50 HAN",
+        "arrives": "17:00 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      }
+    ],
+    "2026-08-26_AMS": [
+      {
+        "price_eur": 376,
+        "airline": "China Southern",
+        "stops": 2,
+        "layovers": [
+          "CAN",
+          "FRA"
+        ],
+        "duration": "22h 15m",
+        "departs": "08:05 HAN",
+        "arrives": "14:20 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 405,
+        "airline": "Air China",
+        "stops": 2,
+        "layovers": [
+          "PEK",
+          "FRA"
+        ],
+        "duration": "21h 55m",
+        "departs": "07:00 HAN",
+        "arrives": "05:55 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 432,
+        "airline": "China Eastern",
+        "stops": 2,
+        "layovers": [
+          "PVG",
+          "FRA"
+        ],
+        "duration": "21h 40m",
+        "departs": "09:10 HAN",
+        "arrives": "07:50 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 456,
+        "airline": "Cathay Pacific",
+        "stops": 1,
+        "layovers": [
+          "HKG"
+        ],
+        "duration": "17h 40m",
+        "departs": "17:15 HAN",
+        "arrives": "11:55 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 467,
+        "airline": "Singapore Airlines",
+        "stops": 1,
+        "layovers": [
+          "SIN"
+        ],
+        "duration": "18h 55m",
+        "departs": "00:40 HAN",
+        "arrives": "07:35 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 482,
+        "airline": "Turkish Airlines",
+        "stops": 1,
+        "layovers": [
+          "IST"
+        ],
+        "duration": "16h 50m",
+        "departs": "03:30 HAN",
+        "arrives": "10:20",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 497,
+        "airline": "Korean Air",
+        "stops": 2,
+        "layovers": [
+          "ICN",
+          "FRA"
+        ],
+        "duration": "24h 10m",
+        "departs": "09:30 HAN",
+        "arrives": "11:40 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 529,
+        "airline": "KLM",
+        "stops": 0,
+        "layovers": [],
+        "duration": "11h 50m",
+        "departs": "23:55 HAN",
+        "arrives": "11:45 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 558,
+        "airline": "EVA Air",
+        "stops": 2,
+        "layovers": [
+          "TPE",
+          "FRA"
+        ],
+        "duration": "23h 05m",
+        "departs": "16:20 HAN",
+        "arrives": "16:25 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 580,
+        "airline": "Vietnam Airlines + KLM",
+        "stops": 1,
+        "layovers": [
+          "CDG"
+        ],
+        "duration": "20h 10m",
+        "departs": "23:50 HAN",
+        "arrives": "17:00 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      }
+    ],
+    "2026-08-26_DUS": [
+      {
+        "price_eur": 350,
+        "airline": "China Southern",
+        "stops": 2,
+        "layovers": [
+          "CAN",
+          "FRA"
+        ],
+        "duration": "22h 15m",
+        "departs": "08:05 HAN",
+        "arrives": "14:20 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 376,
+        "airline": "Air China",
+        "stops": 2,
+        "layovers": [
+          "PEK",
+          "FRA"
+        ],
+        "duration": "21h 55m",
+        "departs": "07:00 HAN",
+        "arrives": "05:55 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 401,
+        "airline": "China Eastern",
+        "stops": 2,
+        "layovers": [
+          "PVG",
+          "FRA"
+        ],
+        "duration": "21h 40m",
+        "departs": "09:10 HAN",
+        "arrives": "07:50 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 424,
+        "airline": "Cathay Pacific",
+        "stops": 1,
+        "layovers": [
+          "HKG"
+        ],
+        "duration": "17h 40m",
+        "departs": "17:15 HAN",
+        "arrives": "11:55 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 434,
+        "airline": "Singapore Airlines",
+        "stops": 1,
+        "layovers": [
+          "SIN"
+        ],
+        "duration": "18h 55m",
+        "departs": "00:40 HAN",
+        "arrives": "07:35 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 448,
+        "airline": "Turkish Airlines",
+        "stops": 1,
+        "layovers": [
+          "IST"
+        ],
+        "duration": "16h 50m",
+        "departs": "03:30 HAN",
+        "arrives": "10:20",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 462,
+        "airline": "Korean Air",
+        "stops": 2,
+        "layovers": [
+          "ICN",
+          "FRA"
+        ],
+        "duration": "24h 10m",
+        "departs": "09:30 HAN",
+        "arrives": "11:40 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 492,
+        "airline": "KLM",
+        "stops": 0,
+        "layovers": [],
+        "duration": "11h 50m",
+        "departs": "23:55 HAN",
+        "arrives": "11:45 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 519,
+        "airline": "EVA Air",
+        "stops": 2,
+        "layovers": [
+          "TPE",
+          "FRA"
+        ],
+        "duration": "23h 05m",
+        "departs": "16:20 HAN",
+        "arrives": "16:25 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 540,
+        "airline": "Vietnam Airlines + KLM",
+        "stops": 1,
+        "layovers": [
+          "CDG"
+        ],
+        "duration": "20h 10m",
+        "departs": "23:50 HAN",
+        "arrives": "17:00 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      }
+    ],
+    "2026-08-26_BRU": [
+      {
+        "price_eur": 361,
+        "airline": "China Southern",
+        "stops": 2,
+        "layovers": [
+          "CAN",
+          "FRA"
+        ],
+        "duration": "22h 15m",
+        "departs": "08:05 HAN",
+        "arrives": "14:20 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 388,
+        "airline": "Air China",
+        "stops": 2,
+        "layovers": [
+          "PEK",
+          "FRA"
+        ],
+        "duration": "21h 55m",
+        "departs": "07:00 HAN",
+        "arrives": "05:55 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 414,
+        "airline": "China Eastern",
+        "stops": 2,
+        "layovers": [
+          "PVG",
+          "FRA"
+        ],
+        "duration": "21h 40m",
+        "departs": "09:10 HAN",
+        "arrives": "07:50 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 437,
+        "airline": "Cathay Pacific",
+        "stops": 1,
+        "layovers": [
+          "HKG"
+        ],
+        "duration": "17h 40m",
+        "departs": "17:15 HAN",
+        "arrives": "11:55 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 448,
+        "airline": "Singapore Airlines",
+        "stops": 1,
+        "layovers": [
+          "SIN"
+        ],
+        "duration": "18h 55m",
+        "departs": "00:40 HAN",
+        "arrives": "07:35 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 462,
+        "airline": "Turkish Airlines",
+        "stops": 1,
+        "layovers": [
+          "IST"
+        ],
+        "duration": "16h 50m",
+        "departs": "03:30 HAN",
+        "arrives": "10:20",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 477,
+        "airline": "Korean Air",
+        "stops": 2,
+        "layovers": [
+          "ICN",
+          "FRA"
+        ],
+        "duration": "24h 10m",
+        "departs": "09:30 HAN",
+        "arrives": "11:40 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 508,
+        "airline": "KLM",
+        "stops": 0,
+        "layovers": [],
+        "duration": "11h 50m",
+        "departs": "23:55 HAN",
+        "arrives": "11:45 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 536,
+        "airline": "EVA Air",
+        "stops": 2,
+        "layovers": [
+          "TPE",
+          "FRA"
+        ],
+        "duration": "23h 05m",
+        "departs": "16:20 HAN",
+        "arrives": "16:25 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 557,
+        "airline": "Vietnam Airlines + KLM",
+        "stops": 1,
+        "layovers": [
+          "CDG"
+        ],
+        "duration": "20h 10m",
+        "departs": "23:50 HAN",
+        "arrives": "17:00 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      }
+    ],
+    "2026-08-27_AMS": [
+      {
+        "price_eur": 384,
+        "airline": "China Southern",
+        "stops": 2,
+        "layovers": [
+          "CAN",
+          "FRA"
+        ],
+        "duration": "22h 15m",
+        "departs": "08:05 HAN",
+        "arrives": "14:20 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 412,
+        "airline": "Air China",
+        "stops": 2,
+        "layovers": [
+          "PEK",
+          "FRA"
+        ],
+        "duration": "21h 55m",
+        "departs": "07:00 HAN",
+        "arrives": "05:55 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 440,
+        "airline": "China Eastern",
+        "stops": 2,
+        "layovers": [
+          "PVG",
+          "FRA"
+        ],
+        "duration": "21h 40m",
+        "departs": "09:10 HAN",
+        "arrives": "07:50 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 464,
+        "airline": "Cathay Pacific",
+        "stops": 1,
+        "layovers": [
+          "HKG"
+        ],
+        "duration": "17h 40m",
+        "departs": "17:15 HAN",
+        "arrives": "11:55 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 476,
+        "airline": "Singapore Airlines",
+        "stops": 1,
+        "layovers": [
+          "SIN"
+        ],
+        "duration": "18h 55m",
+        "departs": "00:40 HAN",
+        "arrives": "07:35 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 491,
+        "airline": "Turkish Airlines",
+        "stops": 1,
+        "layovers": [
+          "IST"
+        ],
+        "duration": "16h 50m",
+        "departs": "03:30 HAN",
+        "arrives": "10:20",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 507,
+        "airline": "Korean Air",
+        "stops": 2,
+        "layovers": [
+          "ICN",
+          "FRA"
+        ],
+        "duration": "24h 10m",
+        "departs": "09:30 HAN",
+        "arrives": "11:40 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 540,
+        "airline": "KLM",
+        "stops": 0,
+        "layovers": [],
+        "duration": "11h 50m",
+        "departs": "23:55 HAN",
+        "arrives": "11:45 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 569,
+        "airline": "EVA Air",
+        "stops": 2,
+        "layovers": [
+          "TPE",
+          "FRA"
+        ],
+        "duration": "23h 05m",
+        "departs": "16:20 HAN",
+        "arrives": "16:25 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 591,
+        "airline": "Vietnam Airlines + KLM",
+        "stops": 1,
+        "layovers": [
+          "CDG"
+        ],
+        "duration": "20h 10m",
+        "departs": "23:50 HAN",
+        "arrives": "17:00 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      }
+    ],
+    "2026-08-27_DUS": [
+      {
+        "price_eur": 357,
+        "airline": "China Southern",
+        "stops": 2,
+        "layovers": [
+          "CAN",
+          "FRA"
+        ],
+        "duration": "22h 15m",
+        "departs": "08:05 HAN",
+        "arrives": "14:20 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 383,
+        "airline": "Air China",
+        "stops": 2,
+        "layovers": [
+          "PEK",
+          "FRA"
+        ],
+        "duration": "21h 55m",
+        "departs": "07:00 HAN",
+        "arrives": "05:55 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 409,
+        "airline": "China Eastern",
+        "stops": 2,
+        "layovers": [
+          "PVG",
+          "FRA"
+        ],
+        "duration": "21h 40m",
+        "departs": "09:10 HAN",
+        "arrives": "07:50 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 432,
+        "airline": "Cathay Pacific",
+        "stops": 1,
+        "layovers": [
+          "HKG"
+        ],
+        "duration": "17h 40m",
+        "departs": "17:15 HAN",
+        "arrives": "11:55 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 443,
+        "airline": "Singapore Airlines",
+        "stops": 1,
+        "layovers": [
+          "SIN"
+        ],
+        "duration": "18h 55m",
+        "departs": "00:40 HAN",
+        "arrives": "07:35 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 456,
+        "airline": "Turkish Airlines",
+        "stops": 1,
+        "layovers": [
+          "IST"
+        ],
+        "duration": "16h 50m",
+        "departs": "03:30 HAN",
+        "arrives": "10:20",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 471,
+        "airline": "Korean Air",
+        "stops": 2,
+        "layovers": [
+          "ICN",
+          "FRA"
+        ],
+        "duration": "24h 10m",
+        "departs": "09:30 HAN",
+        "arrives": "11:40 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 502,
+        "airline": "KLM",
+        "stops": 0,
+        "layovers": [],
+        "duration": "11h 50m",
+        "departs": "23:55 HAN",
+        "arrives": "11:45 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 529,
+        "airline": "EVA Air",
+        "stops": 2,
+        "layovers": [
+          "TPE",
+          "FRA"
+        ],
+        "duration": "23h 05m",
+        "departs": "16:20 HAN",
+        "arrives": "16:25 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 550,
+        "airline": "Vietnam Airlines + KLM",
+        "stops": 1,
+        "layovers": [
+          "CDG"
+        ],
+        "duration": "20h 10m",
+        "departs": "23:50 HAN",
+        "arrives": "17:00 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      }
+    ],
+    "2026-08-27_BRU": [
+      {
+        "price_eur": 368,
+        "airline": "China Southern",
+        "stops": 2,
+        "layovers": [
+          "CAN",
+          "FRA"
+        ],
+        "duration": "22h 15m",
+        "departs": "08:05 HAN",
+        "arrives": "14:20 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 396,
+        "airline": "Air China",
+        "stops": 2,
+        "layovers": [
+          "PEK",
+          "FRA"
+        ],
+        "duration": "21h 55m",
+        "departs": "07:00 HAN",
+        "arrives": "05:55 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 422,
+        "airline": "China Eastern",
+        "stops": 2,
+        "layovers": [
+          "PVG",
+          "FRA"
+        ],
+        "duration": "21h 40m",
+        "departs": "09:10 HAN",
+        "arrives": "07:50 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 446,
+        "airline": "Cathay Pacific",
+        "stops": 1,
+        "layovers": [
+          "HKG"
+        ],
+        "duration": "17h 40m",
+        "departs": "17:15 HAN",
+        "arrives": "11:55 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 457,
+        "airline": "Singapore Airlines",
+        "stops": 1,
+        "layovers": [
+          "SIN"
+        ],
+        "duration": "18h 55m",
+        "departs": "00:40 HAN",
+        "arrives": "07:35 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 471,
+        "airline": "Turkish Airlines",
+        "stops": 1,
+        "layovers": [
+          "IST"
+        ],
+        "duration": "16h 50m",
+        "departs": "03:30 HAN",
+        "arrives": "10:20",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 486,
+        "airline": "Korean Air",
+        "stops": 2,
+        "layovers": [
+          "ICN",
+          "FRA"
+        ],
+        "duration": "24h 10m",
+        "departs": "09:30 HAN",
+        "arrives": "11:40 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 518,
+        "airline": "KLM",
+        "stops": 0,
+        "layovers": [],
+        "duration": "11h 50m",
+        "departs": "23:55 HAN",
+        "arrives": "11:45 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 546,
+        "airline": "EVA Air",
+        "stops": 2,
+        "layovers": [
+          "TPE",
+          "FRA"
+        ],
+        "duration": "23h 05m",
+        "departs": "16:20 HAN",
+        "arrives": "16:25 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 568,
+        "airline": "Vietnam Airlines + KLM",
+        "stops": 1,
+        "layovers": [
+          "CDG"
+        ],
+        "duration": "20h 10m",
+        "departs": "23:50 HAN",
+        "arrives": "17:00 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      }
+    ],
+    "2026-08-28_AMS": [
+      {
+        "price_eur": 340,
+        "airline": "China Southern",
+        "stops": 2,
+        "layovers": [
+          "CAN",
+          "FRA"
+        ],
+        "duration": "22h 15m",
+        "departs": "08:05 HAN",
+        "arrives": "14:20 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 366,
+        "airline": "Air China",
+        "stops": 2,
+        "layovers": [
+          "PEK",
+          "FRA"
+        ],
+        "duration": "21h 55m",
+        "departs": "07:00 HAN",
+        "arrives": "05:55 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 390,
+        "airline": "China Eastern",
+        "stops": 2,
+        "layovers": [
+          "PVG",
+          "FRA"
+        ],
+        "duration": "21h 40m",
+        "departs": "09:10 HAN",
+        "arrives": "07:50 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 412,
+        "airline": "Cathay Pacific",
+        "stops": 1,
+        "layovers": [
+          "HKG"
+        ],
+        "duration": "17h 40m",
+        "departs": "17:15 HAN",
+        "arrives": "11:55 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 422,
+        "airline": "Singapore Airlines",
+        "stops": 1,
+        "layovers": [
+          "SIN"
+        ],
+        "duration": "18h 55m",
+        "departs": "00:40 HAN",
+        "arrives": "07:35 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 435,
+        "airline": "Turkish Airlines",
+        "stops": 1,
+        "layovers": [
+          "IST"
+        ],
+        "duration": "16h 50m",
+        "departs": "03:30 HAN",
+        "arrives": "10:20",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 449,
+        "airline": "Korean Air",
+        "stops": 2,
+        "layovers": [
+          "ICN",
+          "FRA"
+        ],
+        "duration": "24h 10m",
+        "departs": "09:30 HAN",
+        "arrives": "11:40 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 478,
+        "airline": "KLM",
+        "stops": 0,
+        "layovers": [],
+        "duration": "11h 50m",
+        "departs": "23:55 HAN",
+        "arrives": "11:45 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 505,
+        "airline": "EVA Air",
+        "stops": 2,
+        "layovers": [
+          "TPE",
+          "FRA"
+        ],
+        "duration": "23h 05m",
+        "departs": "16:20 HAN",
+        "arrives": "16:25 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 525,
+        "airline": "Vietnam Airlines + KLM",
+        "stops": 1,
+        "layovers": [
+          "CDG"
+        ],
+        "duration": "20h 10m",
+        "departs": "23:50 HAN",
+        "arrives": "17:00 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      }
+    ],
+    "2026-08-28_DUS": [
+      {
+        "price_eur": 316,
+        "airline": "China Southern",
+        "stops": 2,
+        "layovers": [
+          "CAN",
+          "FRA"
+        ],
+        "duration": "22h 15m",
+        "departs": "08:05 HAN",
+        "arrives": "14:20 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 340,
+        "airline": "Air China",
+        "stops": 2,
+        "layovers": [
+          "PEK",
+          "FRA"
+        ],
+        "duration": "21h 55m",
+        "departs": "07:00 HAN",
+        "arrives": "05:55 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 363,
+        "airline": "China Eastern",
+        "stops": 2,
+        "layovers": [
+          "PVG",
+          "FRA"
+        ],
+        "duration": "21h 40m",
+        "departs": "09:10 HAN",
+        "arrives": "07:50 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 383,
+        "airline": "Cathay Pacific",
+        "stops": 1,
+        "layovers": [
+          "HKG"
+        ],
+        "duration": "17h 40m",
+        "departs": "17:15 HAN",
+        "arrives": "11:55 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 393,
+        "airline": "Singapore Airlines",
+        "stops": 1,
+        "layovers": [
+          "SIN"
+        ],
+        "duration": "18h 55m",
+        "departs": "00:40 HAN",
+        "arrives": "07:35 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 405,
+        "airline": "Turkish Airlines",
+        "stops": 1,
+        "layovers": [
+          "IST"
+        ],
+        "duration": "16h 50m",
+        "departs": "03:30 HAN",
+        "arrives": "10:20",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 418,
+        "airline": "Korean Air",
+        "stops": 2,
+        "layovers": [
+          "ICN",
+          "FRA"
+        ],
+        "duration": "24h 10m",
+        "departs": "09:30 HAN",
+        "arrives": "11:40 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 445,
+        "airline": "KLM",
+        "stops": 0,
+        "layovers": [],
+        "duration": "11h 50m",
+        "departs": "23:55 HAN",
+        "arrives": "11:45 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 469,
+        "airline": "EVA Air",
+        "stops": 2,
+        "layovers": [
+          "TPE",
+          "FRA"
+        ],
+        "duration": "23h 05m",
+        "departs": "16:20 HAN",
+        "arrives": "16:25 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 488,
+        "airline": "Vietnam Airlines + KLM",
+        "stops": 1,
+        "layovers": [
+          "CDG"
+        ],
+        "duration": "20h 10m",
+        "departs": "23:50 HAN",
+        "arrives": "17:00 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      }
+    ],
+    "2026-08-28_BRU": [
+      {
+        "price_eur": 327,
+        "airline": "China Southern",
+        "stops": 2,
+        "layovers": [
+          "CAN",
+          "FRA"
+        ],
+        "duration": "22h 15m",
+        "departs": "08:05 HAN",
+        "arrives": "14:20 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 351,
+        "airline": "Air China",
+        "stops": 2,
+        "layovers": [
+          "PEK",
+          "FRA"
+        ],
+        "duration": "21h 55m",
+        "departs": "07:00 HAN",
+        "arrives": "05:55 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 374,
+        "airline": "China Eastern",
+        "stops": 2,
+        "layovers": [
+          "PVG",
+          "FRA"
+        ],
+        "duration": "21h 40m",
+        "departs": "09:10 HAN",
+        "arrives": "07:50 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 395,
+        "airline": "Cathay Pacific",
+        "stops": 1,
+        "layovers": [
+          "HKG"
+        ],
+        "duration": "17h 40m",
+        "departs": "17:15 HAN",
+        "arrives": "11:55 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 405,
+        "airline": "Singapore Airlines",
+        "stops": 1,
+        "layovers": [
+          "SIN"
+        ],
+        "duration": "18h 55m",
+        "departs": "00:40 HAN",
+        "arrives": "07:35 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 418,
+        "airline": "Turkish Airlines",
+        "stops": 1,
+        "layovers": [
+          "IST"
+        ],
+        "duration": "16h 50m",
+        "departs": "03:30 HAN",
+        "arrives": "10:20",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 431,
+        "airline": "Korean Air",
+        "stops": 2,
+        "layovers": [
+          "ICN",
+          "FRA"
+        ],
+        "duration": "24h 10m",
+        "departs": "09:30 HAN",
+        "arrives": "11:40 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 459,
+        "airline": "KLM",
+        "stops": 0,
+        "layovers": [],
+        "duration": "11h 50m",
+        "departs": "23:55 HAN",
+        "arrives": "11:45 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 485,
+        "airline": "EVA Air",
+        "stops": 2,
+        "layovers": [
+          "TPE",
+          "FRA"
+        ],
+        "duration": "23h 05m",
+        "departs": "16:20 HAN",
+        "arrives": "16:25 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 504,
+        "airline": "Vietnam Airlines + KLM",
+        "stops": 1,
+        "layovers": [
+          "CDG"
+        ],
+        "duration": "20h 10m",
+        "departs": "23:50 HAN",
+        "arrives": "17:00 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      }
+    ],
+    "2026-08-29_AMS": [
+      {
+        "price_eur": 348,
+        "airline": "China Southern",
+        "stops": 2,
+        "layovers": [
+          "CAN",
+          "FRA"
+        ],
+        "duration": "22h 15m",
+        "departs": "08:05 HAN",
+        "arrives": "14:20 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 373,
+        "airline": "Air China",
+        "stops": 2,
+        "layovers": [
+          "PEK",
+          "FRA"
+        ],
+        "duration": "21h 55m",
+        "departs": "07:00 HAN",
+        "arrives": "05:55 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 398,
+        "airline": "China Eastern",
+        "stops": 2,
+        "layovers": [
+          "PVG",
+          "FRA"
+        ],
+        "duration": "21h 40m",
+        "departs": "09:10 HAN",
+        "arrives": "07:50 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 420,
+        "airline": "Cathay Pacific",
+        "stops": 1,
+        "layovers": [
+          "HKG"
+        ],
+        "duration": "17h 40m",
+        "departs": "17:15 HAN",
+        "arrives": "11:55 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 431,
+        "airline": "Singapore Airlines",
+        "stops": 1,
+        "layovers": [
+          "SIN"
+        ],
+        "duration": "18h 55m",
+        "departs": "00:40 HAN",
+        "arrives": "07:35 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 444,
+        "airline": "Turkish Airlines",
+        "stops": 1,
+        "layovers": [
+          "IST"
+        ],
+        "duration": "16h 50m",
+        "departs": "03:30 HAN",
+        "arrives": "10:20",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 459,
+        "airline": "Korean Air",
+        "stops": 2,
+        "layovers": [
+          "ICN",
+          "FRA"
+        ],
+        "duration": "24h 10m",
+        "departs": "09:30 HAN",
+        "arrives": "11:40 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 489,
+        "airline": "KLM",
+        "stops": 0,
+        "layovers": [],
+        "duration": "11h 50m",
+        "departs": "23:55 HAN",
+        "arrives": "11:45 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 516,
+        "airline": "EVA Air",
+        "stops": 2,
+        "layovers": [
+          "TPE",
+          "FRA"
+        ],
+        "duration": "23h 05m",
+        "departs": "16:20 HAN",
+        "arrives": "16:25 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 536,
+        "airline": "Vietnam Airlines + KLM",
+        "stops": 1,
+        "layovers": [
+          "CDG"
+        ],
+        "duration": "20h 10m",
+        "departs": "23:50 HAN",
+        "arrives": "17:00 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      }
+    ],
+    "2026-08-29_DUS": [
+      {
+        "price_eur": 323,
+        "airline": "China Southern",
+        "stops": 2,
+        "layovers": [
+          "CAN",
+          "FRA"
+        ],
+        "duration": "22h 15m",
+        "departs": "08:05 HAN",
+        "arrives": "14:20 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 347,
+        "airline": "Air China",
+        "stops": 2,
+        "layovers": [
+          "PEK",
+          "FRA"
+        ],
+        "duration": "21h 55m",
+        "departs": "07:00 HAN",
+        "arrives": "05:55 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 371,
+        "airline": "China Eastern",
+        "stops": 2,
+        "layovers": [
+          "PVG",
+          "FRA"
+        ],
+        "duration": "21h 40m",
+        "departs": "09:10 HAN",
+        "arrives": "07:50 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 391,
+        "airline": "Cathay Pacific",
+        "stops": 1,
+        "layovers": [
+          "HKG"
+        ],
+        "duration": "17h 40m",
+        "departs": "17:15 HAN",
+        "arrives": "11:55 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 401,
+        "airline": "Singapore Airlines",
+        "stops": 1,
+        "layovers": [
+          "SIN"
+        ],
+        "duration": "18h 55m",
+        "departs": "00:40 HAN",
+        "arrives": "07:35 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 413,
+        "airline": "Turkish Airlines",
+        "stops": 1,
+        "layovers": [
+          "IST"
+        ],
+        "duration": "16h 50m",
+        "departs": "03:30 HAN",
+        "arrives": "10:20",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 427,
+        "airline": "Korean Air",
+        "stops": 2,
+        "layovers": [
+          "ICN",
+          "FRA"
+        ],
+        "duration": "24h 10m",
+        "departs": "09:30 HAN",
+        "arrives": "11:40 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 454,
+        "airline": "KLM",
+        "stops": 0,
+        "layovers": [],
+        "duration": "11h 50m",
+        "departs": "23:55 HAN",
+        "arrives": "11:45 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 479,
+        "airline": "EVA Air",
+        "stops": 2,
+        "layovers": [
+          "TPE",
+          "FRA"
+        ],
+        "duration": "23h 05m",
+        "departs": "16:20 HAN",
+        "arrives": "16:25 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 498,
+        "airline": "Vietnam Airlines + KLM",
+        "stops": 1,
+        "layovers": [
+          "CDG"
+        ],
+        "duration": "20h 10m",
+        "departs": "23:50 HAN",
+        "arrives": "17:00 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      }
+    ],
+    "2026-08-29_BRU": [
+      {
+        "price_eur": 334,
+        "airline": "China Southern",
+        "stops": 2,
+        "layovers": [
+          "CAN",
+          "FRA"
+        ],
+        "duration": "22h 15m",
+        "departs": "08:05 HAN",
+        "arrives": "14:20 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 359,
+        "airline": "Air China",
+        "stops": 2,
+        "layovers": [
+          "PEK",
+          "FRA"
+        ],
+        "duration": "21h 55m",
+        "departs": "07:00 HAN",
+        "arrives": "05:55 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 382,
+        "airline": "China Eastern",
+        "stops": 2,
+        "layovers": [
+          "PVG",
+          "FRA"
+        ],
+        "duration": "21h 40m",
+        "departs": "09:10 HAN",
+        "arrives": "07:50 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 404,
+        "airline": "Cathay Pacific",
+        "stops": 1,
+        "layovers": [
+          "HKG"
+        ],
+        "duration": "17h 40m",
+        "departs": "17:15 HAN",
+        "arrives": "11:55 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 414,
+        "airline": "Singapore Airlines",
+        "stops": 1,
+        "layovers": [
+          "SIN"
+        ],
+        "duration": "18h 55m",
+        "departs": "00:40 HAN",
+        "arrives": "07:35 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 427,
+        "airline": "Turkish Airlines",
+        "stops": 1,
+        "layovers": [
+          "IST"
+        ],
+        "duration": "16h 50m",
+        "departs": "03:30 HAN",
+        "arrives": "10:20",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 441,
+        "airline": "Korean Air",
+        "stops": 2,
+        "layovers": [
+          "ICN",
+          "FRA"
+        ],
+        "duration": "24h 10m",
+        "departs": "09:30 HAN",
+        "arrives": "11:40 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 469,
+        "airline": "KLM",
+        "stops": 0,
+        "layovers": [],
+        "duration": "11h 50m",
+        "departs": "23:55 HAN",
+        "arrives": "11:45 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 495,
+        "airline": "EVA Air",
+        "stops": 2,
+        "layovers": [
+          "TPE",
+          "FRA"
+        ],
+        "duration": "23h 05m",
+        "departs": "16:20 HAN",
+        "arrives": "16:25 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 514,
+        "airline": "Vietnam Airlines + KLM",
+        "stops": 1,
+        "layovers": [
+          "CDG"
+        ],
+        "duration": "20h 10m",
+        "departs": "23:50 HAN",
+        "arrives": "17:00 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      }
+    ],
+    "2026-08-30_AMS": [
+      {
+        "price_eur": 355,
+        "airline": "China Southern",
+        "stops": 2,
+        "layovers": [
+          "CAN",
+          "FRA"
+        ],
+        "duration": "22h 15m",
+        "departs": "08:05 HAN",
+        "arrives": "14:20 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 381,
+        "airline": "Air China",
+        "stops": 2,
+        "layovers": [
+          "PEK",
+          "FRA"
+        ],
+        "duration": "21h 55m",
+        "departs": "07:00 HAN",
+        "arrives": "05:55 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 407,
+        "airline": "China Eastern",
+        "stops": 2,
+        "layovers": [
+          "PVG",
+          "FRA"
+        ],
+        "duration": "21h 40m",
+        "departs": "09:10 HAN",
+        "arrives": "07:50 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 429,
+        "airline": "Cathay Pacific",
+        "stops": 1,
+        "layovers": [
+          "HKG"
+        ],
+        "duration": "17h 40m",
+        "departs": "17:15 HAN",
+        "arrives": "11:55 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 440,
+        "airline": "Singapore Airlines",
+        "stops": 1,
+        "layovers": [
+          "SIN"
+        ],
+        "duration": "18h 55m",
+        "departs": "00:40 HAN",
+        "arrives": "07:35 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 454,
+        "airline": "Turkish Airlines",
+        "stops": 1,
+        "layovers": [
+          "IST"
+        ],
+        "duration": "16h 50m",
+        "departs": "03:30 HAN",
+        "arrives": "10:20",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 468,
+        "airline": "Korean Air",
+        "stops": 2,
+        "layovers": [
+          "ICN",
+          "FRA"
+        ],
+        "duration": "24h 10m",
+        "departs": "09:30 HAN",
+        "arrives": "11:40 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 499,
+        "airline": "KLM",
+        "stops": 0,
+        "layovers": [],
+        "duration": "11h 50m",
+        "departs": "23:55 HAN",
+        "arrives": "11:45 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 526,
+        "airline": "EVA Air",
+        "stops": 2,
+        "layovers": [
+          "TPE",
+          "FRA"
+        ],
+        "duration": "23h 05m",
+        "departs": "16:20 HAN",
+        "arrives": "16:25 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 547,
+        "airline": "Vietnam Airlines + KLM",
+        "stops": 1,
+        "layovers": [
+          "CDG"
+        ],
+        "duration": "20h 10m",
+        "departs": "23:50 HAN",
+        "arrives": "17:00 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      }
+    ],
+    "2026-08-30_DUS": [
+      {
+        "price_eur": 330,
+        "airline": "China Southern",
+        "stops": 2,
+        "layovers": [
+          "CAN",
+          "FRA"
+        ],
+        "duration": "22h 15m",
+        "departs": "08:05 HAN",
+        "arrives": "14:20 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 355,
+        "airline": "Air China",
+        "stops": 2,
+        "layovers": [
+          "PEK",
+          "FRA"
+        ],
+        "duration": "21h 55m",
+        "departs": "07:00 HAN",
+        "arrives": "05:55 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 378,
+        "airline": "China Eastern",
+        "stops": 2,
+        "layovers": [
+          "PVG",
+          "FRA"
+        ],
+        "duration": "21h 40m",
+        "departs": "09:10 HAN",
+        "arrives": "07:50 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 399,
+        "airline": "Cathay Pacific",
+        "stops": 1,
+        "layovers": [
+          "HKG"
+        ],
+        "duration": "17h 40m",
+        "departs": "17:15 HAN",
+        "arrives": "11:55 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 409,
+        "airline": "Singapore Airlines",
+        "stops": 1,
+        "layovers": [
+          "SIN"
+        ],
+        "duration": "18h 55m",
+        "departs": "00:40 HAN",
+        "arrives": "07:35 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 422,
+        "airline": "Turkish Airlines",
+        "stops": 1,
+        "layovers": [
+          "IST"
+        ],
+        "duration": "16h 50m",
+        "departs": "03:30 HAN",
+        "arrives": "10:20",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 436,
+        "airline": "Korean Air",
+        "stops": 2,
+        "layovers": [
+          "ICN",
+          "FRA"
+        ],
+        "duration": "24h 10m",
+        "departs": "09:30 HAN",
+        "arrives": "11:40 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 464,
+        "airline": "KLM",
+        "stops": 0,
+        "layovers": [],
+        "duration": "11h 50m",
+        "departs": "23:55 HAN",
+        "arrives": "11:45 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 489,
+        "airline": "EVA Air",
+        "stops": 2,
+        "layovers": [
+          "TPE",
+          "FRA"
+        ],
+        "duration": "23h 05m",
+        "departs": "16:20 HAN",
+        "arrives": "16:25 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 509,
+        "airline": "Vietnam Airlines + KLM",
+        "stops": 1,
+        "layovers": [
+          "CDG"
+        ],
+        "duration": "20h 10m",
+        "departs": "23:50 HAN",
+        "arrives": "17:00 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      }
+    ],
+    "2026-08-30_BRU": [
+      {
+        "price_eur": 341,
+        "airline": "China Southern",
+        "stops": 2,
+        "layovers": [
+          "CAN",
+          "FRA"
+        ],
+        "duration": "22h 15m",
+        "departs": "08:05 HAN",
+        "arrives": "14:20 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 366,
+        "airline": "Air China",
+        "stops": 2,
+        "layovers": [
+          "PEK",
+          "FRA"
+        ],
+        "duration": "21h 55m",
+        "departs": "07:00 HAN",
+        "arrives": "05:55 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 390,
+        "airline": "China Eastern",
+        "stops": 2,
+        "layovers": [
+          "PVG",
+          "FRA"
+        ],
+        "duration": "21h 40m",
+        "departs": "09:10 HAN",
+        "arrives": "07:50 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 412,
+        "airline": "Cathay Pacific",
+        "stops": 1,
+        "layovers": [
+          "HKG"
+        ],
+        "duration": "17h 40m",
+        "departs": "17:15 HAN",
+        "arrives": "11:55 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 422,
+        "airline": "Singapore Airlines",
+        "stops": 1,
+        "layovers": [
+          "SIN"
+        ],
+        "duration": "18h 55m",
+        "departs": "00:40 HAN",
+        "arrives": "07:35 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 436,
+        "airline": "Turkish Airlines",
+        "stops": 1,
+        "layovers": [
+          "IST"
+        ],
+        "duration": "16h 50m",
+        "departs": "03:30 HAN",
+        "arrives": "10:20",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 450,
+        "airline": "Korean Air",
+        "stops": 2,
+        "layovers": [
+          "ICN",
+          "FRA"
+        ],
+        "duration": "24h 10m",
+        "departs": "09:30 HAN",
+        "arrives": "11:40 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 479,
+        "airline": "KLM",
+        "stops": 0,
+        "layovers": [],
+        "duration": "11h 50m",
+        "departs": "23:55 HAN",
+        "arrives": "11:45 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 505,
+        "airline": "EVA Air",
+        "stops": 2,
+        "layovers": [
+          "TPE",
+          "FRA"
+        ],
+        "duration": "23h 05m",
+        "departs": "16:20 HAN",
+        "arrives": "16:25 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 525,
+        "airline": "Vietnam Airlines + KLM",
+        "stops": 1,
+        "layovers": [
+          "CDG"
+        ],
+        "duration": "20h 10m",
+        "departs": "23:50 HAN",
+        "arrives": "17:00 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      }
+    ],
+    "2026-08-31_AMS": [
+      {
+        "price_eur": 362,
+        "airline": "China Southern",
+        "stops": 2,
+        "layovers": [
+          "CAN",
+          "FRA"
+        ],
+        "duration": "22h 15m",
+        "departs": "08:05 HAN",
+        "arrives": "14:20 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 389,
+        "airline": "Air China",
+        "stops": 2,
+        "layovers": [
+          "PEK",
+          "FRA"
+        ],
+        "duration": "21h 55m",
+        "departs": "07:00 HAN",
+        "arrives": "05:55 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 415,
+        "airline": "China Eastern",
+        "stops": 2,
+        "layovers": [
+          "PVG",
+          "FRA"
+        ],
+        "duration": "21h 40m",
+        "departs": "09:10 HAN",
+        "arrives": "07:50 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 438,
+        "airline": "Cathay Pacific",
+        "stops": 1,
+        "layovers": [
+          "HKG"
+        ],
+        "duration": "17h 40m",
+        "departs": "17:15 HAN",
+        "arrives": "11:55 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 449,
+        "airline": "Singapore Airlines",
+        "stops": 1,
+        "layovers": [
+          "SIN"
+        ],
+        "duration": "18h 55m",
+        "departs": "00:40 HAN",
+        "arrives": "07:35 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 463,
+        "airline": "Turkish Airlines",
+        "stops": 1,
+        "layovers": [
+          "IST"
+        ],
+        "duration": "16h 50m",
+        "departs": "03:30 HAN",
+        "arrives": "10:20",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 478,
+        "airline": "Korean Air",
+        "stops": 2,
+        "layovers": [
+          "ICN",
+          "FRA"
+        ],
+        "duration": "24h 10m",
+        "departs": "09:30 HAN",
+        "arrives": "11:40 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 509,
+        "airline": "KLM",
+        "stops": 0,
+        "layovers": [],
+        "duration": "11h 50m",
+        "departs": "23:55 HAN",
+        "arrives": "11:45 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 537,
+        "airline": "EVA Air",
+        "stops": 2,
+        "layovers": [
+          "TPE",
+          "FRA"
+        ],
+        "duration": "23h 05m",
+        "departs": "16:20 HAN",
+        "arrives": "16:25 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 558,
+        "airline": "Vietnam Airlines + KLM",
+        "stops": 1,
+        "layovers": [
+          "CDG"
+        ],
+        "duration": "20h 10m",
+        "departs": "23:50 HAN",
+        "arrives": "17:00 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      }
+    ],
+    "2026-08-31_DUS": [
+      {
+        "price_eur": 337,
+        "airline": "China Southern",
+        "stops": 2,
+        "layovers": [
+          "CAN",
+          "FRA"
+        ],
+        "duration": "22h 15m",
+        "departs": "08:05 HAN",
+        "arrives": "14:20 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 362,
+        "airline": "Air China",
+        "stops": 2,
+        "layovers": [
+          "PEK",
+          "FRA"
+        ],
+        "duration": "21h 55m",
+        "departs": "07:00 HAN",
+        "arrives": "05:55 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 386,
+        "airline": "China Eastern",
+        "stops": 2,
+        "layovers": [
+          "PVG",
+          "FRA"
+        ],
+        "duration": "21h 40m",
+        "departs": "09:10 HAN",
+        "arrives": "07:50 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 407,
+        "airline": "Cathay Pacific",
+        "stops": 1,
+        "layovers": [
+          "HKG"
+        ],
+        "duration": "17h 40m",
+        "departs": "17:15 HAN",
+        "arrives": "11:55 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 418,
+        "airline": "Singapore Airlines",
+        "stops": 1,
+        "layovers": [
+          "SIN"
+        ],
+        "duration": "18h 55m",
+        "departs": "00:40 HAN",
+        "arrives": "07:35 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 431,
+        "airline": "Turkish Airlines",
+        "stops": 1,
+        "layovers": [
+          "IST"
+        ],
+        "duration": "16h 50m",
+        "departs": "03:30 HAN",
+        "arrives": "10:20",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 445,
+        "airline": "Korean Air",
+        "stops": 2,
+        "layovers": [
+          "ICN",
+          "FRA"
+        ],
+        "duration": "24h 10m",
+        "departs": "09:30 HAN",
+        "arrives": "11:40 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 473,
+        "airline": "KLM",
+        "stops": 0,
+        "layovers": [],
+        "duration": "11h 50m",
+        "departs": "23:55 HAN",
+        "arrives": "11:45 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 499,
+        "airline": "EVA Air",
+        "stops": 2,
+        "layovers": [
+          "TPE",
+          "FRA"
+        ],
+        "duration": "23h 05m",
+        "departs": "16:20 HAN",
+        "arrives": "16:25 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 519,
+        "airline": "Vietnam Airlines + KLM",
+        "stops": 1,
+        "layovers": [
+          "CDG"
+        ],
+        "duration": "20h 10m",
+        "departs": "23:50 HAN",
+        "arrives": "17:00 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      }
+    ],
+    "2026-08-31_BRU": [
+      {
+        "price_eur": 348,
+        "airline": "China Southern",
+        "stops": 2,
+        "layovers": [
+          "CAN",
+          "FRA"
+        ],
+        "duration": "22h 15m",
+        "departs": "08:05 HAN",
+        "arrives": "14:20 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 373,
+        "airline": "Air China",
+        "stops": 2,
+        "layovers": [
+          "PEK",
+          "FRA"
+        ],
+        "duration": "21h 55m",
+        "departs": "07:00 HAN",
+        "arrives": "05:55 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 398,
+        "airline": "China Eastern",
+        "stops": 2,
+        "layovers": [
+          "PVG",
+          "FRA"
+        ],
+        "duration": "21h 40m",
+        "departs": "09:10 HAN",
+        "arrives": "07:50 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 420,
+        "airline": "Cathay Pacific",
+        "stops": 1,
+        "layovers": [
+          "HKG"
+        ],
+        "duration": "17h 40m",
+        "departs": "17:15 HAN",
+        "arrives": "11:55 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 431,
+        "airline": "Singapore Airlines",
+        "stops": 1,
+        "layovers": [
+          "SIN"
+        ],
+        "duration": "18h 55m",
+        "departs": "00:40 HAN",
+        "arrives": "07:35 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 444,
+        "airline": "Turkish Airlines",
+        "stops": 1,
+        "layovers": [
+          "IST"
+        ],
+        "duration": "16h 50m",
+        "departs": "03:30 HAN",
+        "arrives": "10:20",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 459,
+        "airline": "Korean Air",
+        "stops": 2,
+        "layovers": [
+          "ICN",
+          "FRA"
+        ],
+        "duration": "24h 10m",
+        "departs": "09:30 HAN",
+        "arrives": "11:40 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 489,
+        "airline": "KLM",
+        "stops": 0,
+        "layovers": [],
+        "duration": "11h 50m",
+        "departs": "23:55 HAN",
+        "arrives": "11:45 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 516,
+        "airline": "EVA Air",
+        "stops": 2,
+        "layovers": [
+          "TPE",
+          "FRA"
+        ],
+        "duration": "23h 05m",
+        "departs": "16:20 HAN",
+        "arrives": "16:25 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 536,
+        "airline": "Vietnam Airlines + KLM",
+        "stops": 1,
+        "layovers": [
+          "CDG"
+        ],
+        "duration": "20h 10m",
+        "departs": "23:50 HAN",
+        "arrives": "17:00 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      }
+    ],
+    "2026-09-01_AMS": [
+      {
+        "price_eur": 348,
+        "airline": "China Southern",
+        "stops": 2,
+        "layovers": [
+          "CAN",
+          "FRA"
+        ],
+        "duration": "22h 15m",
+        "departs": "08:05 HAN",
+        "arrives": "14:20 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 373,
+        "airline": "Air China",
+        "stops": 2,
+        "layovers": [
+          "PEK",
+          "FRA"
+        ],
+        "duration": "21h 55m",
+        "departs": "07:00 HAN",
+        "arrives": "05:55 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 398,
+        "airline": "China Eastern",
+        "stops": 2,
+        "layovers": [
+          "PVG",
+          "FRA"
+        ],
+        "duration": "21h 40m",
+        "departs": "09:10 HAN",
+        "arrives": "07:50 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 420,
+        "airline": "Cathay Pacific",
+        "stops": 1,
+        "layovers": [
+          "HKG"
+        ],
+        "duration": "17h 40m",
+        "departs": "17:15 HAN",
+        "arrives": "11:55 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 431,
+        "airline": "Singapore Airlines",
+        "stops": 1,
+        "layovers": [
+          "SIN"
+        ],
+        "duration": "18h 55m",
+        "departs": "00:40 HAN",
+        "arrives": "07:35 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 444,
+        "airline": "Turkish Airlines",
+        "stops": 1,
+        "layovers": [
+          "IST"
+        ],
+        "duration": "16h 50m",
+        "departs": "03:30 HAN",
+        "arrives": "10:20",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 459,
+        "airline": "Korean Air",
+        "stops": 2,
+        "layovers": [
+          "ICN",
+          "FRA"
+        ],
+        "duration": "24h 10m",
+        "departs": "09:30 HAN",
+        "arrives": "11:40 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 489,
+        "airline": "KLM",
+        "stops": 0,
+        "layovers": [],
+        "duration": "11h 50m",
+        "departs": "23:55 HAN",
+        "arrives": "11:45 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 516,
+        "airline": "EVA Air",
+        "stops": 2,
+        "layovers": [
+          "TPE",
+          "FRA"
+        ],
+        "duration": "23h 05m",
+        "departs": "16:20 HAN",
+        "arrives": "16:25 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 536,
+        "airline": "Vietnam Airlines + KLM",
+        "stops": 1,
+        "layovers": [
+          "CDG"
+        ],
+        "duration": "20h 10m",
+        "departs": "23:50 HAN",
+        "arrives": "17:00 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      }
+    ],
+    "2026-09-01_DUS": [
+      {
+        "price_eur": 323,
+        "airline": "China Southern",
+        "stops": 2,
+        "layovers": [
+          "CAN",
+          "FRA"
+        ],
+        "duration": "22h 15m",
+        "departs": "08:05 HAN",
+        "arrives": "14:20 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 347,
+        "airline": "Air China",
+        "stops": 2,
+        "layovers": [
+          "PEK",
+          "FRA"
+        ],
+        "duration": "21h 55m",
+        "departs": "07:00 HAN",
+        "arrives": "05:55 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 371,
+        "airline": "China Eastern",
+        "stops": 2,
+        "layovers": [
+          "PVG",
+          "FRA"
+        ],
+        "duration": "21h 40m",
+        "departs": "09:10 HAN",
+        "arrives": "07:50 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 391,
+        "airline": "Cathay Pacific",
+        "stops": 1,
+        "layovers": [
+          "HKG"
+        ],
+        "duration": "17h 40m",
+        "departs": "17:15 HAN",
+        "arrives": "11:55 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 401,
+        "airline": "Singapore Airlines",
+        "stops": 1,
+        "layovers": [
+          "SIN"
+        ],
+        "duration": "18h 55m",
+        "departs": "00:40 HAN",
+        "arrives": "07:35 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 413,
+        "airline": "Turkish Airlines",
+        "stops": 1,
+        "layovers": [
+          "IST"
+        ],
+        "duration": "16h 50m",
+        "departs": "03:30 HAN",
+        "arrives": "10:20",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 427,
+        "airline": "Korean Air",
+        "stops": 2,
+        "layovers": [
+          "ICN",
+          "FRA"
+        ],
+        "duration": "24h 10m",
+        "departs": "09:30 HAN",
+        "arrives": "11:40 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 454,
+        "airline": "KLM",
+        "stops": 0,
+        "layovers": [],
+        "duration": "11h 50m",
+        "departs": "23:55 HAN",
+        "arrives": "11:45 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 479,
+        "airline": "EVA Air",
+        "stops": 2,
+        "layovers": [
+          "TPE",
+          "FRA"
+        ],
+        "duration": "23h 05m",
+        "departs": "16:20 HAN",
+        "arrives": "16:25 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 498,
+        "airline": "Vietnam Airlines + KLM",
+        "stops": 1,
+        "layovers": [
+          "CDG"
+        ],
+        "duration": "20h 10m",
+        "departs": "23:50 HAN",
+        "arrives": "17:00 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      }
+    ],
+    "2026-09-01_BRU": [
+      {
+        "price_eur": 334,
+        "airline": "China Southern",
+        "stops": 2,
+        "layovers": [
+          "CAN",
+          "FRA"
+        ],
+        "duration": "22h 15m",
+        "departs": "08:05 HAN",
+        "arrives": "14:20 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 359,
+        "airline": "Air China",
+        "stops": 2,
+        "layovers": [
+          "PEK",
+          "FRA"
+        ],
+        "duration": "21h 55m",
+        "departs": "07:00 HAN",
+        "arrives": "05:55 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 382,
+        "airline": "China Eastern",
+        "stops": 2,
+        "layovers": [
+          "PVG",
+          "FRA"
+        ],
+        "duration": "21h 40m",
+        "departs": "09:10 HAN",
+        "arrives": "07:50 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 404,
+        "airline": "Cathay Pacific",
+        "stops": 1,
+        "layovers": [
+          "HKG"
+        ],
+        "duration": "17h 40m",
+        "departs": "17:15 HAN",
+        "arrives": "11:55 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 414,
+        "airline": "Singapore Airlines",
+        "stops": 1,
+        "layovers": [
+          "SIN"
+        ],
+        "duration": "18h 55m",
+        "departs": "00:40 HAN",
+        "arrives": "07:35 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 427,
+        "airline": "Turkish Airlines",
+        "stops": 1,
+        "layovers": [
+          "IST"
+        ],
+        "duration": "16h 50m",
+        "departs": "03:30 HAN",
+        "arrives": "10:20",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 441,
+        "airline": "Korean Air",
+        "stops": 2,
+        "layovers": [
+          "ICN",
+          "FRA"
+        ],
+        "duration": "24h 10m",
+        "departs": "09:30 HAN",
+        "arrives": "11:40 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 469,
+        "airline": "KLM",
+        "stops": 0,
+        "layovers": [],
+        "duration": "11h 50m",
+        "departs": "23:55 HAN",
+        "arrives": "11:45 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 495,
+        "airline": "EVA Air",
+        "stops": 2,
+        "layovers": [
+          "TPE",
+          "FRA"
+        ],
+        "duration": "23h 05m",
+        "departs": "16:20 HAN",
+        "arrives": "16:25 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 514,
+        "airline": "Vietnam Airlines + KLM",
+        "stops": 1,
+        "layovers": [
+          "CDG"
+        ],
+        "duration": "20h 10m",
+        "departs": "23:50 HAN",
+        "arrives": "17:00 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      }
+    ],
+    "2026-09-02_AMS": [
+      {
+        "price_eur": 355,
+        "airline": "China Southern",
+        "stops": 2,
+        "layovers": [
+          "CAN",
+          "FRA"
+        ],
+        "duration": "22h 15m",
+        "departs": "08:05 HAN",
+        "arrives": "14:20 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 381,
+        "airline": "Air China",
+        "stops": 2,
+        "layovers": [
+          "PEK",
+          "FRA"
+        ],
+        "duration": "21h 55m",
+        "departs": "07:00 HAN",
+        "arrives": "05:55 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 407,
+        "airline": "China Eastern",
+        "stops": 2,
+        "layovers": [
+          "PVG",
+          "FRA"
+        ],
+        "duration": "21h 40m",
+        "departs": "09:10 HAN",
+        "arrives": "07:50 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 429,
+        "airline": "Cathay Pacific",
+        "stops": 1,
+        "layovers": [
+          "HKG"
+        ],
+        "duration": "17h 40m",
+        "departs": "17:15 HAN",
+        "arrives": "11:55 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 440,
+        "airline": "Singapore Airlines",
+        "stops": 1,
+        "layovers": [
+          "SIN"
+        ],
+        "duration": "18h 55m",
+        "departs": "00:40 HAN",
+        "arrives": "07:35 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 454,
+        "airline": "Turkish Airlines",
+        "stops": 1,
+        "layovers": [
+          "IST"
+        ],
+        "duration": "16h 50m",
+        "departs": "03:30 HAN",
+        "arrives": "10:20",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 468,
+        "airline": "Korean Air",
+        "stops": 2,
+        "layovers": [
+          "ICN",
+          "FRA"
+        ],
+        "duration": "24h 10m",
+        "departs": "09:30 HAN",
+        "arrives": "11:40 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 499,
+        "airline": "KLM",
+        "stops": 0,
+        "layovers": [],
+        "duration": "11h 50m",
+        "departs": "23:55 HAN",
+        "arrives": "11:45 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 526,
+        "airline": "EVA Air",
+        "stops": 2,
+        "layovers": [
+          "TPE",
+          "FRA"
+        ],
+        "duration": "23h 05m",
+        "departs": "16:20 HAN",
+        "arrives": "16:25 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 547,
+        "airline": "Vietnam Airlines + KLM",
+        "stops": 1,
+        "layovers": [
+          "CDG"
+        ],
+        "duration": "20h 10m",
+        "departs": "23:50 HAN",
+        "arrives": "17:00 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      }
+    ],
+    "2026-09-02_DUS": [
+      {
+        "price_eur": 330,
+        "airline": "China Southern",
+        "stops": 2,
+        "layovers": [
+          "CAN",
+          "FRA"
+        ],
+        "duration": "22h 15m",
+        "departs": "08:05 HAN",
+        "arrives": "14:20 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 355,
+        "airline": "Air China",
+        "stops": 2,
+        "layovers": [
+          "PEK",
+          "FRA"
+        ],
+        "duration": "21h 55m",
+        "departs": "07:00 HAN",
+        "arrives": "05:55 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 378,
+        "airline": "China Eastern",
+        "stops": 2,
+        "layovers": [
+          "PVG",
+          "FRA"
+        ],
+        "duration": "21h 40m",
+        "departs": "09:10 HAN",
+        "arrives": "07:50 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 399,
+        "airline": "Cathay Pacific",
+        "stops": 1,
+        "layovers": [
+          "HKG"
+        ],
+        "duration": "17h 40m",
+        "departs": "17:15 HAN",
+        "arrives": "11:55 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 409,
+        "airline": "Singapore Airlines",
+        "stops": 1,
+        "layovers": [
+          "SIN"
+        ],
+        "duration": "18h 55m",
+        "departs": "00:40 HAN",
+        "arrives": "07:35 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 422,
+        "airline": "Turkish Airlines",
+        "stops": 1,
+        "layovers": [
+          "IST"
+        ],
+        "duration": "16h 50m",
+        "departs": "03:30 HAN",
+        "arrives": "10:20",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 436,
+        "airline": "Korean Air",
+        "stops": 2,
+        "layovers": [
+          "ICN",
+          "FRA"
+        ],
+        "duration": "24h 10m",
+        "departs": "09:30 HAN",
+        "arrives": "11:40 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 464,
+        "airline": "KLM",
+        "stops": 0,
+        "layovers": [],
+        "duration": "11h 50m",
+        "departs": "23:55 HAN",
+        "arrives": "11:45 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 489,
+        "airline": "EVA Air",
+        "stops": 2,
+        "layovers": [
+          "TPE",
+          "FRA"
+        ],
+        "duration": "23h 05m",
+        "departs": "16:20 HAN",
+        "arrives": "16:25 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 509,
+        "airline": "Vietnam Airlines + KLM",
+        "stops": 1,
+        "layovers": [
+          "CDG"
+        ],
+        "duration": "20h 10m",
+        "departs": "23:50 HAN",
+        "arrives": "17:00 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      }
+    ],
+    "2026-09-02_BRU": [
+      {
+        "price_eur": 341,
+        "airline": "China Southern",
+        "stops": 2,
+        "layovers": [
+          "CAN",
+          "FRA"
+        ],
+        "duration": "22h 15m",
+        "departs": "08:05 HAN",
+        "arrives": "14:20 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 366,
+        "airline": "Air China",
+        "stops": 2,
+        "layovers": [
+          "PEK",
+          "FRA"
+        ],
+        "duration": "21h 55m",
+        "departs": "07:00 HAN",
+        "arrives": "05:55 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 390,
+        "airline": "China Eastern",
+        "stops": 2,
+        "layovers": [
+          "PVG",
+          "FRA"
+        ],
+        "duration": "21h 40m",
+        "departs": "09:10 HAN",
+        "arrives": "07:50 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 412,
+        "airline": "Cathay Pacific",
+        "stops": 1,
+        "layovers": [
+          "HKG"
+        ],
+        "duration": "17h 40m",
+        "departs": "17:15 HAN",
+        "arrives": "11:55 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 422,
+        "airline": "Singapore Airlines",
+        "stops": 1,
+        "layovers": [
+          "SIN"
+        ],
+        "duration": "18h 55m",
+        "departs": "00:40 HAN",
+        "arrives": "07:35 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 436,
+        "airline": "Turkish Airlines",
+        "stops": 1,
+        "layovers": [
+          "IST"
+        ],
+        "duration": "16h 50m",
+        "departs": "03:30 HAN",
+        "arrives": "10:20",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 450,
+        "airline": "Korean Air",
+        "stops": 2,
+        "layovers": [
+          "ICN",
+          "FRA"
+        ],
+        "duration": "24h 10m",
+        "departs": "09:30 HAN",
+        "arrives": "11:40 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 479,
+        "airline": "KLM",
+        "stops": 0,
+        "layovers": [],
+        "duration": "11h 50m",
+        "departs": "23:55 HAN",
+        "arrives": "11:45 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 505,
+        "airline": "EVA Air",
+        "stops": 2,
+        "layovers": [
+          "TPE",
+          "FRA"
+        ],
+        "duration": "23h 05m",
+        "departs": "16:20 HAN",
+        "arrives": "16:25 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 525,
+        "airline": "Vietnam Airlines + KLM",
+        "stops": 1,
+        "layovers": [
+          "CDG"
+        ],
+        "duration": "20h 10m",
+        "departs": "23:50 HAN",
+        "arrives": "17:00 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      }
+    ],
+    "2026-09-03_AMS": [
+      {
+        "price_eur": 362,
+        "airline": "China Southern",
+        "stops": 2,
+        "layovers": [
+          "CAN",
+          "FRA"
+        ],
+        "duration": "22h 15m",
+        "departs": "08:05 HAN",
+        "arrives": "14:20 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 389,
+        "airline": "Air China",
+        "stops": 2,
+        "layovers": [
+          "PEK",
+          "FRA"
+        ],
+        "duration": "21h 55m",
+        "departs": "07:00 HAN",
+        "arrives": "05:55 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 415,
+        "airline": "China Eastern",
+        "stops": 2,
+        "layovers": [
+          "PVG",
+          "FRA"
+        ],
+        "duration": "21h 40m",
+        "departs": "09:10 HAN",
+        "arrives": "07:50 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 438,
+        "airline": "Cathay Pacific",
+        "stops": 1,
+        "layovers": [
+          "HKG"
+        ],
+        "duration": "17h 40m",
+        "departs": "17:15 HAN",
+        "arrives": "11:55 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 449,
+        "airline": "Singapore Airlines",
+        "stops": 1,
+        "layovers": [
+          "SIN"
+        ],
+        "duration": "18h 55m",
+        "departs": "00:40 HAN",
+        "arrives": "07:35 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 463,
+        "airline": "Turkish Airlines",
+        "stops": 1,
+        "layovers": [
+          "IST"
+        ],
+        "duration": "16h 50m",
+        "departs": "03:30 HAN",
+        "arrives": "10:20",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 478,
+        "airline": "Korean Air",
+        "stops": 2,
+        "layovers": [
+          "ICN",
+          "FRA"
+        ],
+        "duration": "24h 10m",
+        "departs": "09:30 HAN",
+        "arrives": "11:40 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 509,
+        "airline": "KLM",
+        "stops": 0,
+        "layovers": [],
+        "duration": "11h 50m",
+        "departs": "23:55 HAN",
+        "arrives": "11:45 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 537,
+        "airline": "EVA Air",
+        "stops": 2,
+        "layovers": [
+          "TPE",
+          "FRA"
+        ],
+        "duration": "23h 05m",
+        "departs": "16:20 HAN",
+        "arrives": "16:25 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      },
+      {
+        "price_eur": 558,
+        "airline": "Vietnam Airlines + KLM",
+        "stops": 1,
+        "layovers": [
+          "CDG"
+        ],
+        "duration": "20h 10m",
+        "departs": "23:50 HAN",
+        "arrives": "17:00 +1 AMS",
+        "source": "sample",
+        "destination": "AMS",
+        "destination_name": "Amsterdam"
+      }
+    ],
+    "2026-09-03_DUS": [
+      {
+        "price_eur": 337,
+        "airline": "China Southern",
+        "stops": 2,
+        "layovers": [
+          "CAN",
+          "FRA"
+        ],
+        "duration": "22h 15m",
+        "departs": "08:05 HAN",
+        "arrives": "14:20 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 362,
+        "airline": "Air China",
+        "stops": 2,
+        "layovers": [
+          "PEK",
+          "FRA"
+        ],
+        "duration": "21h 55m",
+        "departs": "07:00 HAN",
+        "arrives": "05:55 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 386,
+        "airline": "China Eastern",
+        "stops": 2,
+        "layovers": [
+          "PVG",
+          "FRA"
+        ],
+        "duration": "21h 40m",
+        "departs": "09:10 HAN",
+        "arrives": "07:50 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 407,
+        "airline": "Cathay Pacific",
+        "stops": 1,
+        "layovers": [
+          "HKG"
+        ],
+        "duration": "17h 40m",
+        "departs": "17:15 HAN",
+        "arrives": "11:55 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 418,
+        "airline": "Singapore Airlines",
+        "stops": 1,
+        "layovers": [
+          "SIN"
+        ],
+        "duration": "18h 55m",
+        "departs": "00:40 HAN",
+        "arrives": "07:35 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 431,
+        "airline": "Turkish Airlines",
+        "stops": 1,
+        "layovers": [
+          "IST"
+        ],
+        "duration": "16h 50m",
+        "departs": "03:30 HAN",
+        "arrives": "10:20",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 445,
+        "airline": "Korean Air",
+        "stops": 2,
+        "layovers": [
+          "ICN",
+          "FRA"
+        ],
+        "duration": "24h 10m",
+        "departs": "09:30 HAN",
+        "arrives": "11:40 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 473,
+        "airline": "KLM",
+        "stops": 0,
+        "layovers": [],
+        "duration": "11h 50m",
+        "departs": "23:55 HAN",
+        "arrives": "11:45 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 499,
+        "airline": "EVA Air",
+        "stops": 2,
+        "layovers": [
+          "TPE",
+          "FRA"
+        ],
+        "duration": "23h 05m",
+        "departs": "16:20 HAN",
+        "arrives": "16:25 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      },
+      {
+        "price_eur": 519,
+        "airline": "Vietnam Airlines + KLM",
+        "stops": 1,
+        "layovers": [
+          "CDG"
+        ],
+        "duration": "20h 10m",
+        "departs": "23:50 HAN",
+        "arrives": "17:00 +1 DUS",
+        "source": "sample",
+        "destination": "DUS",
+        "destination_name": "Düsseldorf"
+      }
+    ],
+    "2026-09-03_BRU": [
+      {
+        "price_eur": 348,
+        "airline": "China Southern",
+        "stops": 2,
+        "layovers": [
+          "CAN",
+          "FRA"
+        ],
+        "duration": "22h 15m",
+        "departs": "08:05 HAN",
+        "arrives": "14:20 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 373,
+        "airline": "Air China",
+        "stops": 2,
+        "layovers": [
+          "PEK",
+          "FRA"
+        ],
+        "duration": "21h 55m",
+        "departs": "07:00 HAN",
+        "arrives": "05:55 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 398,
+        "airline": "China Eastern",
+        "stops": 2,
+        "layovers": [
+          "PVG",
+          "FRA"
+        ],
+        "duration": "21h 40m",
+        "departs": "09:10 HAN",
+        "arrives": "07:50 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 420,
+        "airline": "Cathay Pacific",
+        "stops": 1,
+        "layovers": [
+          "HKG"
+        ],
+        "duration": "17h 40m",
+        "departs": "17:15 HAN",
+        "arrives": "11:55 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 431,
+        "airline": "Singapore Airlines",
+        "stops": 1,
+        "layovers": [
+          "SIN"
+        ],
+        "duration": "18h 55m",
+        "departs": "00:40 HAN",
+        "arrives": "07:35 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 444,
+        "airline": "Turkish Airlines",
+        "stops": 1,
+        "layovers": [
+          "IST"
+        ],
+        "duration": "16h 50m",
+        "departs": "03:30 HAN",
+        "arrives": "10:20",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 459,
+        "airline": "Korean Air",
+        "stops": 2,
+        "layovers": [
+          "ICN",
+          "FRA"
+        ],
+        "duration": "24h 10m",
+        "departs": "09:30 HAN",
+        "arrives": "11:40 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 489,
+        "airline": "KLM",
+        "stops": 0,
+        "layovers": [],
+        "duration": "11h 50m",
+        "departs": "23:55 HAN",
+        "arrives": "11:45 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 516,
+        "airline": "EVA Air",
+        "stops": 2,
+        "layovers": [
+          "TPE",
+          "FRA"
+        ],
+        "duration": "23h 05m",
+        "departs": "16:20 HAN",
+        "arrives": "16:25 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      },
+      {
+        "price_eur": 536,
+        "airline": "Vietnam Airlines + KLM",
+        "stops": 1,
+        "layovers": [
+          "CDG"
+        ],
+        "duration": "20h 10m",
+        "departs": "23:50 HAN",
+        "arrives": "17:00 +1 BRU",
+        "source": "sample",
+        "destination": "BRU",
+        "destination_name": "Brussels"
+      }
+    ]
   }
 }
