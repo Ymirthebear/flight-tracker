@@ -401,9 +401,23 @@ function showDate(d) {
     const durationHtml = f.duration
       ? `<span>⏱ ${f.duration}</span>` : "";
 
-    const gfLink  = googleUrl(activeDate);
-    const skyLink = skyscannerUrl(activeDate);
-    const kayLink = kayakUrl(activeDate);
+    // Show only the booking button for the site this flight was found on
+    const source = f.source ?? "sample";
+    let bookBtn = "";
+    if (source.includes("google")) {
+      bookBtn = `<a class="book-btn book-gf" href="${googleUrl(activeDate)}" target="_blank">🔍 Book on Google Flights</a>`;
+    } else if (source.includes("skyscanner")) {
+      bookBtn = `<a class="book-btn book-sky" href="${skyscannerUrl(activeDate)}" target="_blank">🔍 Book on Skyscanner</a>`;
+    } else if (source.includes("kayak")) {
+      bookBtn = `<a class="book-btn book-kay" href="${kayakUrl(activeDate)}" target="_blank">🔍 Book on Kayak</a>`;
+    } else {
+      // Sample/unknown — show all three
+      bookBtn = `
+        <span class="book-label">Search on:</span>
+        <a class="book-btn book-gf"  href="${googleUrl(activeDate)}"     target="_blank">Google Flights</a>
+        <a class="book-btn book-sky" href="${skyscannerUrl(activeDate)}"  target="_blank">Skyscanner</a>
+        <a class="book-btn book-kay" href="${kayakUrl(activeDate)}"       target="_blank">Kayak</a>`;
+    }
 
     return `
       <div class="flight-card ${topPick}">
@@ -416,12 +430,7 @@ function showDate(d) {
             ${layoverHtml}
           </div>
           ${f.duration ? `<div class="flight-duration">⏱ ${f.duration}</div>` : ""}
-          <div class="book-row">
-            <span class="book-label">Book on:</span>
-            <a class="book-btn book-gf"  href="${gfLink}"  target="_blank">🔍 Google Flights</a>
-            <a class="book-btn book-sky" href="${skyLink}" target="_blank">🔍 Skyscanner</a>
-            <a class="book-btn book-kay" href="${kayLink}" target="_blank">🔍 Kayak</a>
-          </div>
+          <div class="book-row">${bookBtn}</div>
         </div>
         <div class="flight-price">
           <div class="amount">€${Math.round(f.price_eur)}</div>

@@ -295,7 +295,7 @@ def scrape_date(page, dep: date) -> list[dict]:
                     flights.append({"price_eur": p, "airline": "Unknown",
                                     "stops": None, "layovers": [], "duration": None,
                                     "departs": None, "arrives": None,
-                                    "source": "google-flights-fallback"})
+                                    "source": "google-flights"})
             except ValueError:
                 pass
 
