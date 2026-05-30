@@ -14,8 +14,8 @@ from datetime import date
 from pathlib import Path
 
 # ─────────────────────────────────────────────────────────
-ORIGIN        = "HAN"
-DEST          = "AMS"
+ORIGIN       = "HAN"
+DESTINATIONS = {"AMS": "Amsterdam", "DUS": "Düsseldorf", "BRU": "Brussels"}
 MAX_PRICE_EUR = 600
 MAX_STOPS     = 2
 
@@ -48,9 +48,9 @@ OUTPUT_FILE = Path(__file__).parent / "flights_data.json"
 # URL builders
 # ─────────────────────────────────────────────────────────
 
-def google_flights_url(d: date) -> str:
+def google_flights_url(d: date, dest_name: str = "Amsterdam") -> str:
     return (f"https://www.google.com/travel/flights/search"
-            f"?q=Flights+from+Hanoi+to+Amsterdam+on+{d}&hl=en&curr=EUR")
+            f"?q=Flights+from+Hanoi+to+{dest_name}+on+{d}&hl=en&curr=EUR")
 
 def skyscanner_url(d: date) -> str:
     ds = d.strftime("%y%m%d")

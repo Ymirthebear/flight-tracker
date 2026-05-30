@@ -24,6 +24,13 @@ PREFERRED_DATES  = [date(2026, 8, d) for d in range(18, 32)]
 ACCEPTABLE_DATES = [date(2026, 9, d) for d in range(1, 4)]
 ALL_DATES        = PREFERRED_DATES + ACCEPTABLE_DATES
 
+# All destination airports (AMS = Amsterdam, DUS = Düsseldorf, BRU = Brussels)
+DESTINATIONS = {
+    "AMS": "Amsterdam",
+    "DUS": "Düsseldorf",
+    "BRU": "Brussels",
+}
+
 BANNED = {
     "LHR","LGW","LCY","STN","LTN",
     "DXB","DWC","AUH","DOH","KWI",
@@ -223,13 +230,13 @@ def is_allowed(price: float, stops: int | None, layovers: list[str]) -> bool:
 # Scraper
 # ─────────────────────────────────────────────────────────
 
-def make_url(dep: date) -> str:
+def make_url(dep: date, dest: str = "AMS", dest_name: str = "Amsterdam") -> str:
     return (f"https://www.google.com/travel/flights/search"
-            f"?q=Flights+from+Hanoi+to+Amsterdam+on+{dep}&hl=en&curr=EUR")
+            f"?q=Flights+from+Hanoi+to+{dest_name}+on+{dep}&hl=en&curr=EUR")
 
-def scrape_date(page, dep: date) -> list[dict]:
+def scrape_date(page, dep: date, dest: str = "AMS", dest_name: str = "Amsterdam") -> list[dict]:
     try:
-        page.goto(make_url(dep), wait_until="domcontentloaded", timeout=30_000)
+        page.goto(make_url(dep, dest, dest_name), wait_until="domcontentloaded", timeout=30_000)
     except PWTimeout:
         print("    timed out")
         return []
@@ -278,7 +285,8 @@ def scrape_date(page, dep: date) -> list[dict]:
                 continue
             flights.append({"price_eur": price, "airline": airline, "stops": stops,
                             "layovers": layovers, "duration": duration,
-                            "departs": departs, "arrives": arrives,
+                            "departs": departs, "arrives": f"{arrives} ({dest})",
+                            "destination": dest, "destination_name": dest_name,
                             "source": "google-flights"})
         except Exception:
             continue
@@ -295,6 +303,7 @@ def scrape_date(page, dep: date) -> list[dict]:
                     flights.append({"price_eur": p, "airline": "Unknown",
                                     "stops": None, "layovers": [], "duration": None,
                                     "departs": None, "arrives": None,
+                                    "destination": dest, "destination_name": dest_name,
                                     "source": "google-flights"})
             except ValueError:
                 pass
@@ -335,11 +344,16 @@ def run():
         )
         page = ctx.new_page()
 
-        for dep in ALL_DATES:
-            label = "★" if dep in PREFERRED_DATES else " "
-            print(f"\n{label} {dep}")
-            flights_by_date[dep.isoformat()] = scrape_date(page, dep)
-            time.sleep(3)
+        for dest, dest_name in DESTINATIONS.items():
+            print(f"\n{'='*40}")
+            print(f"  Destination: {dest_name} ({dest})")
+            print(f"{'='*40}")
+            for dep in ALL_DATES:
+                label = "★" if dep in PREFERRED_DATES else " "
+                key = f"{dep.isoformat()}_{dest}"
+                print(f"\n{label} {dep} → {dest}")
+                flights_by_date[key] = scrape_date(page, dep, dest, dest_name)
+                time.sleep(3)
 
         browser.close()
 
@@ -348,7 +362,7 @@ def run():
         "last_updated": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
         "note": "Live data — scraped by GitHub Actions",
         "config": {
-            "origin": "HAN", "destination": "AMS",
+            "origin": "HAN", "destinations": list(DESTINATIONS.keys()),
             "max_price_eur": MAX_PRICE, "max_stops": MAX_STOPS,
             "preferred_dates":  [d.isoformat() for d in PREFERRED_DATES],
             "acceptable_dates": [d.isoformat() for d in ACCEPTABLE_DATES],
@@ -379,15 +393,4 @@ def run():
                     subj, html = build_deal_email(d, deals, threshold)
                     send_email(to_email, subj, html)
 
-        # Daily run summary
-        if cfg.get("notify_on_run"):
-            print(f"\n  ✉  Sending daily summary to {to_email}…")
-            subj, html = build_run_email(flights_by_date, cfg)
-            send_email(to_email, subj, html)
-    else:
-        print("\n  (Email not configured in notification_config.json)")
-
-    print("=" * 58)
-
-if __name__ == "__main__":
-    run()
+   
