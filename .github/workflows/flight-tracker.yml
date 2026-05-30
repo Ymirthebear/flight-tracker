@@ -1,0 +1,48 @@
+name: Flight Tracker
+
+on:
+  schedule:
+    # 9:00 AM Vietnam time  = 02:00 UTC
+    - cron: '0 2 * * *'
+    # 8:00 PM Vietnam time  = 13:00 UTC
+    - cron: '0 13 * * *'
+  workflow_dispatch:   # manual trigger from GitHub Actions tab
+
+permissions:
+  contents: write
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install playwright
+          playwright install chromium --with-deps
+
+      - name: Run flight scraper
+        run: python scraper_gha.py
+        env:
+          PYTHONUNBUFFERED: "1"
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+
+      - name: Commit updated data
+        run: |
+          git config user.name  "Flight Tracker Bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add flights_data.json
+          git diff --staged --quiet \
+            && echo "No price changes since last run." \
+            || git commit -m "chore: update flight data $(date -u +'%Y-%m-%d %H:%M UTC')"
+          git push
